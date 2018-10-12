@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>设计模式六大原则6:开闭原则 | IOEXT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="定义：一个软件实体如类、模块和函数应该对扩展开放，对修改关闭。  问题由来：在软件的生命周期内，因为变化、升级和维护等原因需要对软件原有代码进行修改时，可能会给旧代码中引入错误，也可能会使我们不得不对整个功能进行重构，并且需要原有代码经过重新测试。  解决方案：当软件需要变化时，尽量通过扩展软件实体的行为来实现变化，而不是通过修改已有的代码来实现变化。   开闭原则是面向对象设计中最基础的设计原">
+<meta name="keywords" content="设计模式原则,开闭原则">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计模式六大原则6:开闭原则">
+<meta property="og:url" content="http://ioext.com/2017/10/20/设计模式六大原则6-开闭原则/index.html">
+<meta property="og:site_name" content="IOEXT">
+<meta property="og:description" content="定义：一个软件实体如类、模块和函数应该对扩展开放，对修改关闭。  问题由来：在软件的生命周期内，因为变化、升级和维护等原因需要对软件原有代码进行修改时，可能会给旧代码中引入错误，也可能会使我们不得不对整个功能进行重构，并且需要原有代码经过重新测试。  解决方案：当软件需要变化时，尽量通过扩展软件实体的行为来实现变化，而不是通过修改已有的代码来实现变化。   开闭原则是面向对象设计中最基础的设计原">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://ioext.com/public/static/images/设计模式六大原则6:开闭原则/1.gif">
+<meta property="og:image" content="http://ioext.com/public/static/images/设计模式六大原则6:开闭原则/2.gif">
+<meta property="og:updated_time" content="2017-10-20T09:22:25.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="设计模式六大原则6:开闭原则">
+<meta name="twitter:description" content="定义：一个软件实体如类、模块和函数应该对扩展开放，对修改关闭。  问题由来：在软件的生命周期内，因为变化、升级和维护等原因需要对软件原有代码进行修改时，可能会给旧代码中引入错误，也可能会使我们不得不对整个功能进行重构，并且需要原有代码经过重新测试。  解决方案：当软件需要变化时，尽量通过扩展软件实体的行为来实现变化，而不是通过修改已有的代码来实现变化。   开闭原则是面向对象设计中最基础的设计原">
+<meta name="twitter:image" content="http://ioext.com/public/static/images/设计模式六大原则6:开闭原则/1.gif">
+  
+    <link rel="alternate" href="/atom.xml" title="IOEXT" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">IOEXT</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://ioext.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-设计模式六大原则6-开闭原则" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/20/设计模式六大原则6-开闭原则/" class="article-date">
+  <time datetime="2017-10-20T07:24:20.000Z" itemprop="datePublished">2017-10-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      设计模式六大原则6:开闭原则
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>定义：一个软件实体如类、模块和函数应该对扩展开放，对修改关闭。</p>
+</li>
+<li><p>问题由来：在软件的生命周期内，因为变化、升级和维护等原因需要对软件原有代码进行修改时，可能会给旧代码中引入错误，也可能会使我们不得不对整个功能进行重构，并且需要原有代码经过重新测试。</p>
+</li>
+<li><p>解决方案：当软件需要变化时，尽量通过扩展软件实体的行为来实现变化，而不是通过修改已有的代码来实现变化。</p>
+</li>
+</ul>
+<p>开闭原则是面向对象设计中最基础的设计原则，它指导我们如何建立稳定灵活的系统。开闭原则可能是设计模式六项原则中定义最模糊的一个了，它只告诉我们对扩展开放，对修改关闭，可是到底如何才能做到对扩展开放，对修改关闭，并没有明确的告诉我们。以前，如果有人告诉我“你进行设计的时候一定要遵守开闭原则”，我会觉的他什么都没说，但貌似又什么都说了。因为开闭原则真的太虚了。</p>
+<p>在仔细思考以及仔细阅读很多设计模式的文章后，终于对开闭原则有了一点认识。其实，我们遵循设计模式前面5大原则，以及使用23种设计模式的目的就是遵循开闭原则。也就是说，只要我们对前面5项原则遵守的好了，设计出的软件自然是符合开闭原则的，这个开闭原则更像是前面五项原则遵守程度的“平均得分”，前面5项原则遵守的好，平均分自然就高，说明软件设计开闭原则遵守的好；如果前面5项原则遵守的不好，则说明开闭原则遵守的不好。</p>
+<p>其实笔者认为，开闭原则无非就是想表达这样一层意思：用抽象构建框架，用实现扩展细节。因为抽象灵活性好，适应性广，只要抽象的合理，可以基本保持软件架构的稳定。而软件中易变的细节，我们用从抽象派生的实现类来进行扩展，当软件需要发生变化时，我们只需要根据需求重新派生一个实现类来扩展就可以了。当然前提是我们的抽象要合理，要对需求的变更有前瞻性和预见性才行。</p>
+<p>说到这里，再回想一下前面说的5项原则， 恰恰是告诉我们用抽象构建框架，用实现扩展细节的注意事项而已：单一职责原则告诉我们实现类要职责单一；里氏替换原则告诉我们不要破坏继承体系；依赖倒置原则告诉我们要面向接口编程；接口隔离原则告诉我们在设计接口的时候要精简单一；迪米特法则告诉我们要降低耦合。而开闭原则是总纲，他告诉我们要对扩展开放，对修改关闭。</p>
+<p>最后说明一下如何去遵守这六个原则。对这六个原则的遵守并不是是和否的问题，而是多和少的问题，也就是说，我们一般不会说有没有遵守，而是说遵守程度的多少。任何事都是过犹不及，设计模式的六个设计原则也是一样，制定这六个原则的目的并不是要我们刻板的遵守他们，而需要根据实际情况灵活运用。对他们的遵守程度只要在一个合理的范围内，就算是良好的设计。我们用一幅图来说明一下。  </p>
+<p><img src="/public/static/images/设计模式六大原则6:开闭原则/1.gif" alt="">  </p>
+<p>图中的每一条维度各代表一项原则，我们依据对这项原则的遵守程度在维度上画一个点，则如果对这项原则遵守的合理的话，这个点应该落在红色的同心圆内部；如果遵守的差，点将会在小圆内部；如果过度遵守，点将会落在大圆外部。一个良好的设计体现在图中，应该是六个顶点都在同心圆中的六边形。  </p>
+<p><img src="/public/static/images/设计模式六大原则6:开闭原则/2.gif" alt="">    </p>
+<p>在上图中，设计1、设计2属于良好的设计，他们对六项原则的遵守程度都在合理的范围内；设计3、设计4设计虽然有些不足，但也基本可以接受；设计5则严重不足，对各项原则都没有很好的遵守；而设计6则遵守过渡了，设计5和设计6都是迫切需要重构的设计。</p>
+<p>到这里，设计模式的六大原则就写完了。主要参考书籍有《设计模式》《设计模式之禅》《大话设计模式》以及网上一些零散的文章，但主要内容主要还是我本人对这六个原则的感悟。写出来的目的一方面是对这六项原则系统地整理一下，一方面也与广大的网友分享，因为设计模式对编程人员来说，的确非常重要。正如有句话叫做一千个读者眼中有一千个哈姆雷特，如果大家对这六项原则的理解跟我有所不同，欢迎留言，大家共同探讨。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ioext.com/2017/10/20/设计模式六大原则6-开闭原则/" data-id="cjn5mfn14000timfci01zghiv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开闭原则/">开闭原则</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式原则/">设计模式原则</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/28/一家要清退所有低端工程师的创业公司/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          一家要清退所有低端工程师的创业公司
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/10/19/设计模式六大原则5-迪米特法则/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">设计模式六大原则5:迪米特法则</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/42章经/">42章经</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Laravel/">Laravel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SwooleFramework/">SwooleFramework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swoole/">swoole</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二分插入排序/">二分插入排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二叉堆/">二叉堆</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/低端/">低端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/依赖倒置/">依赖倒置</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/冒泡排序/">冒泡排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/创业/">创业</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/单一职责/">单一职责</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/堆/">堆</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开闭原则/">开闭原则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/接口隔离原则/">接口隔离原则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插入排序/">插入排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据类型装换/">数据类型装换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/虎嗅/">虎嗅</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式原则/">设计模式原则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/迪米特法则/">迪米特法则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/迭代算法/">迭代算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/选择排序/">选择排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/递归/">递归</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/递推/">递推</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/递推算法/">递推算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/里氏替换原则/">里氏替换原则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/鸡尾酒排序/">鸡尾酒排序</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/42章经/" style="font-size: 10px;">42章经</a> <a href="/tags/Laravel/" style="font-size: 10px;">Laravel</a> <a href="/tags/SwooleFramework/" style="font-size: 10px;">SwooleFramework</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/php/" style="font-size: 17.5px;">php</a> <a href="/tags/swoole/" style="font-size: 10px;">swoole</a> <a href="/tags/二分插入排序/" style="font-size: 10px;">二分插入排序</a> <a href="/tags/二叉堆/" style="font-size: 10px;">二叉堆</a> <a href="/tags/低端/" style="font-size: 10px;">低端</a> <a href="/tags/依赖倒置/" style="font-size: 10px;">依赖倒置</a> <a href="/tags/冒泡排序/" style="font-size: 12.5px;">冒泡排序</a> <a href="/tags/创业/" style="font-size: 10px;">创业</a> <a href="/tags/单一职责/" style="font-size: 10px;">单一职责</a> <a href="/tags/堆/" style="font-size: 10px;">堆</a> <a href="/tags/开闭原则/" style="font-size: 10px;">开闭原则</a> <a href="/tags/接口隔离原则/" style="font-size: 10px;">接口隔离原则</a> <a href="/tags/插入排序/" style="font-size: 12.5px;">插入排序</a> <a href="/tags/数据类型装换/" style="font-size: 10px;">数据类型装换</a> <a href="/tags/算法/" style="font-size: 20px;">算法</a> <a href="/tags/虎嗅/" style="font-size: 10px;">虎嗅</a> <a href="/tags/设计模式/" style="font-size: 15px;">设计模式</a> <a href="/tags/设计模式原则/" style="font-size: 17.5px;">设计模式原则</a> <a href="/tags/迪米特法则/" style="font-size: 10px;">迪米特法则</a> <a href="/tags/迭代算法/" style="font-size: 12.5px;">迭代算法</a> <a href="/tags/选择排序/" style="font-size: 10px;">选择排序</a> <a href="/tags/递归/" style="font-size: 12.5px;">递归</a> <a href="/tags/递推/" style="font-size: 12.5px;">递推</a> <a href="/tags/递推算法/" style="font-size: 12.5px;">递推算法</a> <a href="/tags/里氏替换原则/" style="font-size: 10px;">里氏替换原则</a> <a href="/tags/鸡尾酒排序/" style="font-size: 10px;">鸡尾酒排序</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/10/12/崔永元：别再让孩子聪明伶俐地进去呆若木鸡地出来/">崔永元：别再让孩子聪明伶俐地进去呆若木鸡地出来</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/11/崔永元举报北京朝阳分局新源里派出所/">崔永元举报北京朝阳分局新源里派出所</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/11/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/13/可以管理时间的二叉堆/">可以管理时间的二叉堆</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/11/Mysql常用的数据类型以及转换函数/">Mysql常用的数据类型以及转换函数</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 ioext<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

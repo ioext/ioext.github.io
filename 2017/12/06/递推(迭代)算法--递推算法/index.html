@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>递推(迭代)算法--递推算法 | IOEXT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="递推算法要求某个“大”问题，先获得该大问题的同类问题的“最小问题”的结果，然后，如果能够通过最小问题的结果，根据一个“简单算法”而获得比该最小问题“大一级”问题的结果，则就可以根据该规律，一次次持续获得“更大一级”问题的结果，直到“碰到”最大的问题的结果，也就最终的问题结果。   举例:1、求5的阶乘:123456789101112131415161718192021222324$qian = 1">
+<meta name="keywords" content="递推算法,迭代算法,递归,递推">
+<meta property="og:type" content="article">
+<meta property="og:title" content="递推(迭代)算法--递推算法">
+<meta property="og:url" content="http://ioext.com/2017/12/06/递推(迭代)算法--递推算法/index.html">
+<meta property="og:site_name" content="IOEXT">
+<meta property="og:description" content="递推算法要求某个“大”问题，先获得该大问题的同类问题的“最小问题”的结果，然后，如果能够通过最小问题的结果，根据一个“简单算法”而获得比该最小问题“大一级”问题的结果，则就可以根据该规律，一次次持续获得“更大一级”问题的结果，直到“碰到”最大的问题的结果，也就最终的问题结果。   举例:1、求5的阶乘:123456789101112131415161718192021222324$qian = 1">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://ioext.com/public/static/images/递推算法/1.jpg">
+<meta property="og:updated_time" content="2017-12-07T06:28:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="递推(迭代)算法--递推算法">
+<meta name="twitter:description" content="递推算法要求某个“大”问题，先获得该大问题的同类问题的“最小问题”的结果，然后，如果能够通过最小问题的结果，根据一个“简单算法”而获得比该最小问题“大一级”问题的结果，则就可以根据该规律，一次次持续获得“更大一级”问题的结果，直到“碰到”最大的问题的结果，也就最终的问题结果。   举例:1、求5的阶乘:123456789101112131415161718192021222324$qian = 1">
+<meta name="twitter:image" content="http://ioext.com/public/static/images/递推算法/1.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="IOEXT" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">IOEXT</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://ioext.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-递推(迭代)算法--递推算法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/06/递推(迭代)算法--递推算法/" class="article-date">
+  <time datetime="2017-12-06T04:17:48.000Z" itemprop="datePublished">2017-12-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      递推(迭代)算法--递推算法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="递推算法"><a href="#递推算法" class="headerlink" title="递推算法"></a>递推算法</h1><p>要求某个“大”问题，先获得该大问题的同类问题的“最小问题”的结果，然后，如果能够通过最小问题的结果，根据一个“简单算法”而获得比该最小问题“大一级”问题的结果，则就可以根据该规律，一次次持续获得“更大一级”问题的结果，直到“碰到”最大的问题的结果，也就最终的问题结果。  </p>
+<p>举例:<br>1、求5的阶乘:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">$qian = 1;                      //1的阶乘,也是&quot;前一个数&quot;的阶乘</span><br><span class="line"></span><br><span class="line">$hou = $qian * 2;               //2的阶乘,也是&quot;后一个数&quot;的阶乘</span><br><span class="line">    $qian = $hou;               //将&quot;刚刚&quot;取得的后一个数的阶乘,当做前一个数的阶乘</span><br><span class="line"></span><br><span class="line">$hou = $qian * 3;               //3的阶乘,也是&quot;后一个数&quot;的阶乘</span><br><span class="line">    $qian = $hou;               //将&quot;刚刚&quot;取得的后一个数的阶乘,当做前一个数的阶乘,为什么?</span><br><span class="line">                                //因为,后再往后的代码可能还需要继续使用这个当做前一个数来用</span><br><span class="line"></span><br><span class="line">$hou = $qian * 4;               //4的阶乘,也是&quot;后一个数&quot;的阶乘</span><br><span class="line">    $qian = $hou;               //将&quot;刚刚&quot;取得的后一个数的阶乘,当做前一个数的阶乘</span><br><span class="line"></span><br><span class="line">$hou = $qian * 5;               //5的阶乘,也是&quot;后一个数&quot;的阶乘</span><br><span class="line">    $qian = $hou;               //将&quot;刚刚&quot;取得的后一个数的阶乘,当做前一个数的阶乘</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//以上代码的含义,使用循环来完成,就是:</span><br><span class="line">$qian = 1;</span><br><span class="line">for( $i=2; $i&lt;=5; ++$i )</span><br><span class="line">&#123;</span><br><span class="line">    $hou = $qian * $i;</span><br><span class="line">        $qian = $hou;</span><br><span class="line">&#125;</span><br><span class="line">echo &quot;5的阶乘:&quot;.$hou;</span><br></pre></td></tr></table></figure></p>
+<p>在分析一个:求斐波那契数列的第20项:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//例子:1,1,2,3,5,8,13,23...</span><br><span class="line">$n1 = 1;        //第一项,也可以认为:第n-2项</span><br><span class="line">$n2 = 1;        //第二项,也可以任务:第n-1项</span><br><span class="line"></span><br><span class="line">for( $i=3; $i&lt;20; ++$i )</span><br><span class="line">&#123;</span><br><span class="line">    $result = $n1+$n2;</span><br><span class="line">    //即:如果,i=3,此时就得到第3项是:2;</span><br><span class="line">    //也就是现在的数列为:1,1,2</span><br><span class="line">    //在往下思考,如果要求第4项,则怎么办?如下:</span><br><span class="line">    $n = $n2;</span><br><span class="line">    $n2 = $result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">echo $result;</span><br></pre></td></tr></table></figure></p>
+<p>再分析一个:<br>数列如:【1】,【2】,3,,6,9,18,27…<br>规律:第n个数是第n-2个数的3倍,已知第一个是1,第二个是2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$n1 = 1;</span><br><span class="line">$n2 = 2;</span><br><span class="line"></span><br><span class="line">for( $i=3; $i &lt;= 20; ++$i )</span><br><span class="line">&#123;</span><br><span class="line">    $result = $n1*3;//一般规律:当签要求的结果,是第n-2个数的结果乘以3</span><br><span class="line">    $n1 = $n2;      //将一般规律中所需要的&quot;前面数据&quot;预先准备好,以供下一次可能所需</span><br><span class="line">    $n2 = $result;</span><br><span class="line">&#125;</span><br><span class="line">echo $result;</span><br></pre></td></tr></table></figure></p>
+<h3 id="递推算法一般规律"><a href="#递推算法一般规律" class="headerlink" title="递推算法一般规律"></a>递推算法一般规律</h3><p>递推算法通常是用循环来实现，跟函数没有直接关系（虽然也可以写在函数中），其基本模式为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$n1 = 某个已知；	//并且当做“前一个数据”</span><br><span class="line">for( $i = 第2个；  $i &lt;= 最终n个；  ++$i)</span><br><span class="line">&#123;</span><br><span class="line">    $result  = 对 $n1 进行一个简单计算；</span><br><span class="line">    $n1 = $result;		//将已经求得的当前结果值，当做“前一个数据”以供下一次使用！</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/public/static/images/递推算法/1.jpg" alt="">  </p>
+<blockquote>
+<p>特别注意:<br> 如果一个问题，既能够用递归算法完成，也能够用递推算法完成，则推荐使用递推算法！！！</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ioext.com/2017/12/06/递推(迭代)算法--递推算法/" data-id="cjn5mfn15000vimfctgi9gtmj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/迭代算法/">迭代算法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/递归/">递归</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/递推/">递推</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/递推算法/">递推算法</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/12/07/算法-冒泡排序/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          算法--冒泡排序
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/12/06/递推(迭代)算法--递归算法/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">递推(迭代)算法--递归算法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/42章经/">42章经</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Laravel/">Laravel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SwooleFramework/">SwooleFramework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swoole/">swoole</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二分插入排序/">二分插入排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二叉堆/">二叉堆</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/低端/">低端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/依赖倒置/">依赖倒置</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/冒泡排序/">冒泡排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/创业/">创业</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/单一职责/">单一职责</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/堆/">堆</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开闭原则/">开闭原则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/接口隔离原则/">接口隔离原则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插入排序/">插入排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据类型装换/">数据类型装换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/虎嗅/">虎嗅</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式原则/">设计模式原则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/迪米特法则/">迪米特法则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/迭代算法/">迭代算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/选择排序/">选择排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/递归/">递归</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/递推/">递推</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/递推算法/">递推算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/里氏替换原则/">里氏替换原则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/鸡尾酒排序/">鸡尾酒排序</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/42章经/" style="font-size: 10px;">42章经</a> <a href="/tags/Laravel/" style="font-size: 10px;">Laravel</a> <a href="/tags/SwooleFramework/" style="font-size: 10px;">SwooleFramework</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/php/" style="font-size: 17.5px;">php</a> <a href="/tags/swoole/" style="font-size: 10px;">swoole</a> <a href="/tags/二分插入排序/" style="font-size: 10px;">二分插入排序</a> <a href="/tags/二叉堆/" style="font-size: 10px;">二叉堆</a> <a href="/tags/低端/" style="font-size: 10px;">低端</a> <a href="/tags/依赖倒置/" style="font-size: 10px;">依赖倒置</a> <a href="/tags/冒泡排序/" style="font-size: 12.5px;">冒泡排序</a> <a href="/tags/创业/" style="font-size: 10px;">创业</a> <a href="/tags/单一职责/" style="font-size: 10px;">单一职责</a> <a href="/tags/堆/" style="font-size: 10px;">堆</a> <a href="/tags/开闭原则/" style="font-size: 10px;">开闭原则</a> <a href="/tags/接口隔离原则/" style="font-size: 10px;">接口隔离原则</a> <a href="/tags/插入排序/" style="font-size: 12.5px;">插入排序</a> <a href="/tags/数据类型装换/" style="font-size: 10px;">数据类型装换</a> <a href="/tags/算法/" style="font-size: 20px;">算法</a> <a href="/tags/虎嗅/" style="font-size: 10px;">虎嗅</a> <a href="/tags/设计模式/" style="font-size: 15px;">设计模式</a> <a href="/tags/设计模式原则/" style="font-size: 17.5px;">设计模式原则</a> <a href="/tags/迪米特法则/" style="font-size: 10px;">迪米特法则</a> <a href="/tags/迭代算法/" style="font-size: 12.5px;">迭代算法</a> <a href="/tags/选择排序/" style="font-size: 10px;">选择排序</a> <a href="/tags/递归/" style="font-size: 12.5px;">递归</a> <a href="/tags/递推/" style="font-size: 12.5px;">递推</a> <a href="/tags/递推算法/" style="font-size: 12.5px;">递推算法</a> <a href="/tags/里氏替换原则/" style="font-size: 10px;">里氏替换原则</a> <a href="/tags/鸡尾酒排序/" style="font-size: 10px;">鸡尾酒排序</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/10/12/崔永元：别再让孩子聪明伶俐地进去呆若木鸡地出来/">崔永元：别再让孩子聪明伶俐地进去呆若木鸡地出来</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/11/崔永元举报北京朝阳分局新源里派出所/">崔永元举报北京朝阳分局新源里派出所</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/11/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/13/可以管理时间的二叉堆/">可以管理时间的二叉堆</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/11/Mysql常用的数据类型以及转换函数/">Mysql常用的数据类型以及转换函数</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 ioext<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

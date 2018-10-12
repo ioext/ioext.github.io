@@ -504,9 +504,9 @@
     
       <category term="php" scheme="http://ioext.com/tags/php/"/>
     
-      <category term="里氏替换原则" scheme="http://ioext.com/tags/%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99/"/>
-    
       <category term="设计模式" scheme="http://ioext.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="里氏替换原则" scheme="http://ioext.com/tags/%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99/"/>
     
   </entry>
   

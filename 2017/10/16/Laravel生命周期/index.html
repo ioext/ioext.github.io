@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="工欲善其事，必先利其器。在开发Xblog的过程中，稍微领悟了一点Laravel的思想。确实如此，这篇文章读完你可能并不能从无到有写出一个博客，但知道Laravel的核心概念之后，当你再次写起Laravel时，会变得一目了然胸有成竹.   PHP的生命周期万物皆有他的生命周期。熟悉Android的同学一定熟悉Android最经典的Activity的生命周期，Laravel 也不例外，Laravel应">
+<meta name="keywords" content="php,Laravel">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Laravel生命周期的核心概念">
+<meta property="og:url" content="http://ioext.com/2017/10/16/Laravel生命周期/index.html">
+<meta property="og:site_name" content="IOEXT">
+<meta property="og:description" content="工欲善其事，必先利其器。在开发Xblog的过程中，稍微领悟了一点Laravel的思想。确实如此，这篇文章读完你可能并不能从无到有写出一个博客，但知道Laravel的核心概念之后，当你再次写起Laravel时，会变得一目了然胸有成竹.   PHP的生命周期万物皆有他的生命周期。熟悉Android的同学一定熟悉Android最经典的Activity的生命周期，Laravel 也不例外，Laravel应">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://ioext.com/public/static/images/laravel生命周期/1.png">
+<meta property="og:image" content="http://ioext.com/public/static/images/laravel生命周期/2.png">
+<meta property="og:image" content="http://ioext.com/public/static/images/laravel生命周期/3.png">
+<meta property="og:image" content="http://ioext.com/public/static/images/laravel生命周期/4.png">
+<meta property="og:image" content="http://ioext.com/public/static/images/laravel生命周期/5.png">
+<meta property="og:image" content="http://ioext.com/public/static/images/laravel生命周期/6.png">
+<meta property="og:updated_time" content="2017-10-18T06:45:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Laravel生命周期的核心概念">
+<meta name="twitter:description" content="工欲善其事，必先利其器。在开发Xblog的过程中，稍微领悟了一点Laravel的思想。确实如此，这篇文章读完你可能并不能从无到有写出一个博客，但知道Laravel的核心概念之后，当你再次写起Laravel时，会变得一目了然胸有成竹.   PHP的生命周期万物皆有他的生命周期。熟悉Android的同学一定熟悉Android最经典的Activity的生命周期，Laravel 也不例外，Laravel应">
+<meta name="twitter:image" content="http://ioext.com/public/static/images/laravel生命周期/1.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="IOEXT" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://ioext.com/2017/10/16/Laravel生命周期/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Laravel生命周期的核心概念 | IOEXT</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">IOEXT</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ioext.com/2017/10/16/Laravel生命周期/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ioext">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IOEXT">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Laravel生命周期的核心概念
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2017-10-16 18:04:26" itemprop="dateCreated datePublished" datetime="2017-10-16T18:04:26+08:00">2017-10-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2017-10-18 14:45:58" itemprop="dateModified" datetime="2017-10-18T14:45:58+08:00">2017-10-18</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>工欲善其事，必先利其器。在开发Xblog的过程中，稍微领悟了一点Laravel的思想。确实如此，这篇文章读完你可能并不能从无到有写出一个博客，但知道Laravel的核心概念之后，当你再次写起Laravel时，会变得一目了然胸有成竹.  </p>
+<h2 id="PHP的生命周期"><a href="#PHP的生命周期" class="headerlink" title="PHP的生命周期"></a>PHP的生命周期</h2><p>万物皆有他的生命周期。熟悉Android的同学一定熟悉Android最经典的Activity的生命周期，Laravel 也不例外，Laravel应用程序也有自己的生命周期。Laravel是什么？一个PHP框架。所以要想真正说清Laravel的生命周期，必须说清PHP的生命周期。原文参考这里，这里做个总结。  </p>
+<p>PHP有两种运行模式，WEB模式和CLI（命令行）模式。当我们在终端敲入php这个命令的时候，使用的是CLI模式；当使用Nginx或者别web服务器作为宿主处理一个到来的请求时，会调用PHP运行，此时使用的是WEB模式。当我们请求一个PHP文件时，比如Laravel 的public\index.php文件时，PHP为了完成这次请求，会发生5个阶段的生命周期切换：</p>
+<p>1、模块初始化（MINIT），即调用php.ini中指明的扩展的初始化函数进行初始化工作，如mysql扩展。</p>
+<p>2、请求初始化（RINIT），即初始化为执行本次脚本所需要的变量名称和变量值内容的符号表，如$_SESSION变量。</p>
+<p>3、执行该PHP脚本。</p>
+<p>4、请求处理完成(Request Shutdown)，按顺序调用各个模块的RSHUTDOWN方法，对每个变量调用unset函数，如unset $_SESSION变量。</p>
+<p>5、关闭模块(Module Shutdown) ， PHP调用每个扩展的MSHUTDOWN方法，这是各个模块最后一次释放内存的机会。这意味着没有下一个请求了。  </p>
+<p>WEB模式和CLI（命令行）模式很相似，区别是：CLI 模式会在每次脚本执行经历完整的5个周期，因为你脚本执行完不会有下一个请求；而WEB模式为了应对并发，可能采用多线程，因此生命周期1和5有可能只执行一次，下次请求到来时重复2-4的生命周期，这样就节省了系统模块初始化所带来的开销。  </p>
+<p>可以看到，PHP生命周期是很对称的。说了这么多，就是为了定位Laravel运行在哪里，没错，Laravel仅仅运行再第三个阶段：  </p>
+<p><img src="/public/static/images/laravel生命周期/1.png" alt="Image text">  </p>
+<p>知道这些有什么用？你可以优化你的Laravel代码，可以更加深入的了解Larave的singleton（单例）。至少你知道了，每一次请求结束，Php的变量都会unset，Laravel的singleton只是在某一次请求过程中的singleton；你在Laravel 中的静态变量也不能在多个请求之间共享，因为每一次请求结束都会unset。理解这些概念，是写高质量代码的第一步，也是最关键的一步。因此记住，PHP是一种脚本语言，所有的变量只会在这一次请求中生效，下次请求之时已被重置，而不像Java静态变量拥有全局作用</p>
+<p>好了，开始Laravel的生命周期。  </p>
+<h2 id="Laravel的生命周期"><a href="#Laravel的生命周期" class="headerlink" title="Laravel的生命周期"></a>Laravel的生命周期</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Laravel 的生命周期从public\index.php开始，从public\index.php结束</p>
+<p><img src="/public/static/images/laravel生命周期/2.png" alt="Image text">  </p>
+<p>注意：以下几图箭头均代表Request流向  </p>
+<p>这么说有点草率，但事实确实如此。下面是public\index.php的全部源码（Laravel源码的注释是最好的Laravel文档），更具体来说可以分为四步：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1. require __DIR__.&apos;/../bootstrap/autoload.php&apos;;</span><br><span class="line"></span><br><span class="line">2. $app = require_once __DIR__.&apos;/../bootstrap/app.php&apos;;</span><br><span class="line">   $kernel = $app-&gt;make(Illuminate\Contracts\Http\Kernel::class);</span><br><span class="line"></span><br><span class="line">3. $response = $kernel-&gt;handle(</span><br><span class="line">    $request = Illuminate\Http\Request::capture()</span><br><span class="line">   );</span><br><span class="line">   $response-&gt;send();</span><br><span class="line"></span><br><span class="line">4. $kernel-&gt;terminate($request, $response);</span><br></pre></td></tr></table></figure>
+<p>这四步详细的解释是：</p>
+<p>1.注册加载composer自动生成的class loader，包括所有你composer require的依赖（对应代码1）.</p>
+<p>2.生成容器Container，Application实例，并向容器注册核心组件（HttpKernel，ConsoleKernel，ExceptionHandler）（对应代码2，容器很重要，后面详细讲解）。 </p>
+<p>3.处理请求，生成并发送响应（对应代码3，毫不夸张的说，你99%的代码都运行在这个小小的handle方法里面）。 </p>
+<p>4.请求结束，进行回调（对应代码4，还记得可终止中间件吗？没错，就是在这里回调的）。  </p>
+<p><img src="/public/static/images/laravel生命周期/3.png" alt="Image text"> </p>
+<h3 id="启动Laravel基础服务"><a href="#启动Laravel基础服务" class="headerlink" title="启动Laravel基础服务"></a>启动Laravel基础服务</h3><p>第一步注册加载composer自动生成的class loader就是加载初始化第三方依赖，不属于Laravel核心，到此为止。<br>第二步生成容器Container，并向容器注册核心组件，这里牵涉到了容器Container和合同Contracts，这是Laravel的重点，下面将详细讲解。<br>重点是第三步处理请求，生成并发送响应。<br>首先Laravel框架捕获到用户发到public\index.php的请求，生成Illuminate\Http\Request实例，传递给这个小小的handle方法。在方法内部，将该$request实例绑定到第二步生成的$app容器上。让后在该请求真正处理之前，调用bootstrap方法，进行必要的加载和注册，如检测环境，加载配置，注册Facades（假象），注册服务提供者，启动服务提供者等等。这是一个启动数组，具体在Illuminate\Foundation\Http\Kernel中，包括：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">protected $bootstrappers = [</span><br><span class="line">    &apos;Illuminate\Foundation\Bootstrap\DetectEnvironment&apos;,</span><br><span class="line">    &apos;Illuminate\Foundation\Bootstrap\LoadConfiguration&apos;,</span><br><span class="line">    &apos;Illuminate\Foundation\Bootstrap\ConfigureLogging&apos;,</span><br><span class="line">    &apos;Illuminate\Foundation\Bootstrap\HandleExceptions&apos;,</span><br><span class="line">    &apos;Illuminate\Foundation\Bootstrap\RegisterFacades&apos;,</span><br><span class="line">    &apos;Illuminate\Foundation\Bootstrap\RegisterProviders&apos;,</span><br><span class="line">    &apos;Illuminate\Foundation\Bootstrap\BootProviders&apos;,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+<p>看类名知意，Laravel是按顺序遍历执行注册这些基础服务的，注意顺序：Facades先于ServiceProviders，Facades也是重点，后面说，这里简单提一下，注册Facades就是注册config\app.php中的aliases 数组，你使用的很多类，如Auth，Cache,DB等等都是Facades；而ServiceProviders的register方法永远先于boot方法执行，以免产生boot方法依赖某个实例而该实例还未注册的现象。</p>
+<p>所以，你可以在ServiceProviders的register方法中使用任何Facades，在ServiceProviders的boot方法中使用任何register方法中注册的实例或者Facades，这样绝不会产生依赖某个类而未注册的现象。</p>
+<h3 id="将请求传递给路由"><a href="#将请求传递给路由" class="headerlink" title="将请求传递给路由"></a>将请求传递给路由</h3><p>注意到目前为止，Laravel 还没有执行到你所写的主要代码（ServiceProviders中的除外），因为还没有将请求传递给路由。</p>
+<p>在Laravel基础的服务启动之后，就要把请求传递给路由了。传递给路由是通过Pipeline（另开篇章讲解）来传递的，但是Pipeline有一堵墙，在传递给路由之前所有请求都要经过，这堵墙定义在app\Http\Kernel.php中的$middleware数组中，没错就是中间件，默认只有一个CheckForMaintenanceMode中间件，用来检测你的网站是否暂时关闭。这是一个全局中间件，所有请求都要经过，你也可以添加自己的全局中间件。</p>
+<p>然后遍历所有注册的路由，找到最先符合的第一个路由，经过它的路由中间件，进入到控制器或者闭包函数，执行你的具体逻辑代码。</p>
+<p>所以，在请求到达你写的代码之前，Laravel已经做了大量工作，请求也经过了千难万险，那些不符合或者恶意的的请求已被Laravel隔离在外。   </p>
+<p><img src="/public/static/images/laravel生命周期/4.png" alt="Image text"> </p>
+<h3 id="服务容器"><a href="#服务容器" class="headerlink" title="服务容器"></a>服务容器</h3><p>服务容器就是一个普通的容器，用来装类的实例，然后在需要的时候再取出来。用更专业的术语来说是服务容器实现了控制反转（Inversion of Control，缩写为IoC），意思是正常情况下类A需要一个类B的时候，我们需要自己去new类B，意味着我们必须知道类B的更多细节，比如构造函数，随着项目的复杂性增大，这种依赖是毁灭性的。控制反转的意思就是，将类A主动获取类B的过程颠倒过来变成被动，类A只需要声明它需要什么，然后由容器提供。</p>
+<p><img src="/public/static/images/laravel生命周期/5.png" alt="Image text">  </p>
+<p>这样做的好处是，类A不依赖于类B的实现，这样在一定程度上解决了耦合问题。</p>
+<p>在Laravel的服务容器中，为了实现控制反转，可以有以下两种：</p>
+<p>依赖注入（Dependency Injection）。<br>绑定。</p>
+<h3 id="依赖注入"><a href="#依赖注入" class="headerlink" title="依赖注入"></a>依赖注入</h3><p>依赖注入是一种类型提示，举官网的例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">class UserController extends Controller</span><br><span class="line">&#123;</span><br><span class="line">    /**</span><br><span class="line">     * The user repository implementation.</span><br><span class="line">     *</span><br><span class="line">     * @var UserRepository</span><br><span class="line">     */</span><br><span class="line">    protected $users;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Create a new controller instance.</span><br><span class="line">     *</span><br><span class="line">     * @param  UserRepository  $users</span><br><span class="line">     * @return void</span><br><span class="line">     */</span><br><span class="line">    public function __construct(UserRepository $users)</span><br><span class="line">    &#123;</span><br><span class="line">        $this-&gt;users = $users;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Show the profile for the given user.</span><br><span class="line">     *</span><br><span class="line">     * @param  int  $id</span><br><span class="line">     * @return Response</span><br><span class="line">     */</span><br><span class="line">    public function show($id)</span><br><span class="line">    &#123;</span><br><span class="line">        $user = $this-&gt;users-&gt;find($id);</span><br><span class="line"></span><br><span class="line">        return view(&apos;user.profile&apos;, [&apos;user&apos; =&gt; $user]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这里UserController需要一个UserRepository实例，我们只需在构造方法中声明我们需要的类型，容器在实例化UserController时会自动生成UserRepository的实例（或者实现类，因为UserRepository可以为接口），而不用主动去获取UserRepository的实例，这样也就避免了了解UserRepository的更多细节，也不用解决UserRepository所产生的依赖，我们所做的仅仅是声明我们所需要的类型，所有的依赖问题都交给容器去解决。（Xblog使用了Repository的是设计模式，大家可以参考）</p>
+<h3 id="绑定"><a href="#绑定" class="headerlink" title="绑定"></a>绑定</h3><p>绑定操作一般在ServiceProviders中的register方法中，最基本的绑定是容器的bind方法，它接受一个类的别名或者全名和一个闭包来获取实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$this-&gt;app-&gt;bind(&apos;XblogConfig&apos;, function ($app) &#123;</span><br><span class="line">    return new MapRepository();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>还有一个singleton方法，和bind写法没什么区别。你也可以绑定一个已经存在的对象到容器中，上文中提到的request实例就是通过这种方法绑定到容器的：$this-&gt;app-&gt;instance(‘request’, $request);。绑定之后，我们可以通过一下几种方式来获取绑定实例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.  app(&apos;XblogConfig&apos;);</span><br><span class="line"></span><br><span class="line">2.  app()-&gt;make(&apos;XblogConfig&apos;);</span><br><span class="line"></span><br><span class="line">3.  app()[&apos;XblogConfig&apos;];</span><br><span class="line"></span><br><span class="line">4.  resolve(&apos;XblogConfig&apos;);</span><br></pre></td></tr></table></figure>
+<p>以上四种方法均会返回获得MapRepository的实例，唯一的区别是，在一次请求的生命周期中，bind方法的闭包会在每一次调用以上四种方法时执行，singleton方法的闭包只会执行一次。在使用中，如果每一个类要获的不同的实例，或者需要“个性化”的实例时，这时我们需要用bind方法以免这次的使用对下次的使用造成影响；如果实例化一个类比较耗时或者类的方法不依赖该生成的上下文，那么我们可以使用singleton方法绑定。singleton方法绑定的好处就是，如果在一次请求中我们多次使用某个类，那么只生成该类的一个实例将节省时间和空间。</p>
+<p>你也可以绑定接口与实现，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$app-&gt;singleton(</span><br><span class="line">    Illuminate\Contracts\Http\Kernel::class,</span><br><span class="line">    App\Http\Kernel::class</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>上文讲述的Laravel的生命周期的第二步，Laravel默认（在bootstrap\app.php文件中）绑定了Illuminate\Contracts\Http\Kernel，Illuminate\Contracts\Console\Kernel，Illuminate\Contracts\Debug\ExceptionHandler接口的实现类，这些是实现类框架的默认自带的。但是你仍然可以自己去实现。</p>
+<p>还有一种上下文绑定，就是相同的接口，在不同的类中可以自动获取不同的实现，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$this-&gt;app-&gt;when(PhotoController::class)</span><br><span class="line">          -&gt;needs(Filesystem::class)</span><br><span class="line">          -&gt;give(function () &#123;</span><br><span class="line">              return Storage::disk(&apos;local&apos;);</span><br><span class="line">          &#125;);</span><br><span class="line"></span><br><span class="line">$this-&gt;app-&gt;when(VideoController::class)</span><br><span class="line">          -&gt;needs(Filesystem::class)</span><br><span class="line">          -&gt;give(function () &#123;</span><br><span class="line">              return Storage::disk(&apos;s3&apos;);</span><br><span class="line">          &#125;);</span><br></pre></td></tr></table></figure>
+<p>上述表明，同样的接口Filesystem，使用依赖注入时，在PhotoController中获取的是local存储而在VideoController中获取的是s3存储。</p>
+<h3 id="Contracts-amp-Facades（契约-amp-门面）"><a href="#Contracts-amp-Facades（契约-amp-门面）" class="headerlink" title="Contracts &amp; Facades（契约&amp;门面）"></a>Contracts &amp; Facades（契约&amp;门面）</h3><p>Laravel 还有一个强大之处是，比如你只需在配置文件中指明你需要的缓存驱动（redis，memcached，file……），Laravel 就自动办你切换到这种驱动，而不需要你针对某种驱动更改逻辑和代码。Why? 很简单，Laravel定义了一系列Contracts（翻译：契约），本质上是一系列PHP接口，一系列的标准，用来解耦具体需求对实现的依赖关系。其实真正强大的公司是制定标准的公司，程序也是如此，好的标准（接口）尤为重要。当程序变得越来大，这种通过合同或者接口来解耦所带来的可扩展性和可维护性是无可比拟的。</p>
+<p><img src="/public/static/images/laravel生命周期/6.png" alt="Image text">  </p>
+<p>上图不使用Contracts的情况下，对于一种逻辑，我们只能得到一种结果（方块），如果变更需求，意味着我们必须重构代码和逻辑。但是在使用Contracts的情况下，我们只需要按照接口写好逻辑，然后提供不同的实现，就可以在不改动代码逻辑的情况下获得更加多态的结果。</p>
+<p>这么说有点抽象，举一个真实的例子。在完成Xblog的初期，我使用了缓存，所以导致Repository中充满了和cache相关的方法：remember，flush，forget等等。后来国外网友反映，简单的博客并不一定需要缓存。所以我决定把它变成可选，但因为代码中充满和cache相关的方法，实现起来并不是很容易。于是想起Laravel的重要概念Contracts。于是，我把与缓存有关的方法抽象出来形成一个Contracts:XblogCache，实际操作只与Contracts有关，这样问题就得到了解决，而几乎没有改变原有的逻辑。XblogCache的代码如下<a href="https://github.com/lufficc/Xblog/blob/master/app/Contracts/XblogCache.php" target="_blank" rel="noopener">源码点击这里</a>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">namespace App\Contracts;</span><br><span class="line">use Closure;</span><br><span class="line">interface XblogCache</span><br><span class="line">&#123;</span><br><span class="line">    public function setTag($tag);</span><br><span class="line">    public function setTime($time_in_minute);</span><br><span class="line">    public function remember($key, Closure $entity, $tag = null);</span><br><span class="line">    public function forget($key, $tag = null);</span><br><span class="line">    public function clearCache($tag = null);</span><br><span class="line">    public function clearAllCache();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后，我又完成了两个实现类：Cacheable和NoCache：</p>
+<p>1、实现具体缓存。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">class Cacheable implements XblogCache</span><br><span class="line">&#123;</span><br><span class="line">    public $tag;</span><br><span class="line">    public $cacheTime;</span><br><span class="line">    public function setTag($tag)</span><br><span class="line">    &#123;</span><br><span class="line">        $this-&gt;tag = $tag;</span><br><span class="line">    &#125;</span><br><span class="line">    public function remember($key, Closure $entity, $tag = null)</span><br><span class="line">    &#123;</span><br><span class="line">        return cache()-&gt;tags($tag == null ? $this-&gt;tag : $tag)-&gt;remember($key, $this-&gt;cacheTime, $entity);</span><br><span class="line">    &#125;</span><br><span class="line">    public function forget($key, $tag = null)</span><br><span class="line">    &#123;</span><br><span class="line">        cache()-&gt;tags($tag == null ? $this-&gt;tag : $tag)-&gt;forget($key);</span><br><span class="line">    &#125;</span><br><span class="line">    public function clearCache($tag = null)</span><br><span class="line">    &#123;</span><br><span class="line">        cache()-&gt;tags($tag == null ? $this-&gt;tag : $tag)-&gt;flush();</span><br><span class="line">    &#125;</span><br><span class="line">    public function clearAllCache()</span><br><span class="line">    &#123;</span><br><span class="line">        cache()-&gt;flush();</span><br><span class="line">    &#125;</span><br><span class="line">    public function setTime($time_in_minute)</span><br><span class="line">    &#123;</span><br><span class="line">        $this-&gt;cacheTime = $time_in_minute;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>1、不缓存。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">class NoCache implements XblogCache</span><br><span class="line">&#123;</span><br><span class="line">    public function setTag($tag)</span><br><span class="line">    &#123;</span><br><span class="line">    // Do Nothing</span><br><span class="line">    &#125;</span><br><span class="line">    public function setTime($time_in_minute)</span><br><span class="line">    &#123;</span><br><span class="line">    // Do Nothing</span><br><span class="line">    &#125;</span><br><span class="line">    public function remember($key, Closure $entity, $tag = null)</span><br><span class="line">    &#123;</span><br><span class="line">        /**</span><br><span class="line">         * directly return</span><br><span class="line">         */</span><br><span class="line">        return $entity();</span><br><span class="line">    &#125;</span><br><span class="line">    public function forget($key, $tag = null)</span><br><span class="line">    &#123;</span><br><span class="line">        // Do Nothing</span><br><span class="line">    &#125;</span><br><span class="line">    public function clearCache($tag = null)</span><br><span class="line">    &#123;</span><br><span class="line">        // Do Nothing</span><br><span class="line">    &#125;</span><br><span class="line">    public function clearAllCache()</span><br><span class="line">    &#123;</span><br><span class="line">        // Do Nothing</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后再利用容器的绑定，根据不同的配置，返回不同的实现<a href="https://github.com/lufficc/Xblog/blob/master/app/Providers/CacheServiceProvider.php#L28-L34" target="_blank" rel="noopener">源码</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public function register()</span><br><span class="line">&#123;</span><br><span class="line">    $this-&gt;app-&gt;bind(&apos;XblogCache&apos;, function ($app) &#123;</span><br><span class="line">        if (config(&apos;cache.enable&apos;) == &apos;true&apos;) &#123;</span><br><span class="line">            return new Cacheable();</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return new NoCache();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样，就实现了缓存的切换而不需要更改你的具体逻辑代码。当然依靠接口而不依靠具体实现的好处不仅仅这些。实际上，Laravel所有的核心服务都是实现了某个Contracts接口（都在Illuminate\Contracts\文件夹下面），而不是依赖具体的实现，所以完全可以在不改动框架的前提下，使用自己的代码改变Laravel框架核心服务的实现方式。</p>
+<p>说一说Facades。在我们学习了容器的概念后，Facades就变得十分简单了。在我们把类的实例绑定到容器的时候相当于给类起了个别名，然后覆盖Facade的静态方法getFacadeAccessor并返回你的别名，然后你就可以使用你自己的Facade的静态方法来调用你绑定类的动态方法了。其实Facade类利用了__callStatic() 这个魔术方法来延迟调用容器中的对象的方法，这里不过多讲解，你只需要知道Facade实现了将对它调用的静态方法映射到绑定类的动态方法上，这样你就可以使用简单类名调用而不需要记住长长的类名。这也是Facades的中文翻译为假象的原因</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Laravel强大之处不仅仅在于它给你提供了一系列脚手架，比如超级好用的ORM，基于Carbon的时间处理，以及文件存储等等功能。但是Laravel的核心非常非常简单：利用容器和抽象解耦，实现高扩展性。容器和抽象是所有大型框架必须解决的问题，像Java的Spring，Android的Dagger2等等都是围绕这几个问题的。所以本质上讲，Laravel之所以强大出名，是因为它的设计，思想，可扩展性。而Laravel的好用功能只是官方基于这些核心提供的脚手架，你同样也可以很轻松的添加自己的脚手架。</p>
+<p>所以不要觉得Laravel强大是因为他提供的很多功能，而是它的设计模式和思想。</p>
+<p>理解Laravel生命周期和请求的生命周期概念。<br>所有的静态变量和单例，在下一个请求到来时都会重新初始化。<br>将耗时的类或者频繁使用的类用singleton绑定。<br>将变化选项的抽象为Contracts，依赖接口不依赖具体实现。</p>
+<p>本文转载至<a href="https://lufficc.com/blog/the-core-conception-of-laravel" target="_blank" rel="noopener">lufficc的网站</a></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/php/" rel="tag"># php</a>
+          
+            <a href="/tags/Laravel/" rel="tag"># Laravel</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/16/swoole独立于apache、nginx启动SwooleFramweork/" rel="next" title="swoole独立于apache、nginx启动SwooleFramweork">
+                <i class="fa fa-chevron-left"></i> swoole独立于apache、nginx启动SwooleFramweork
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/17/设计模式六大原则1-单一职责原则/" rel="prev" title="设计模式六大原则1:单一职责原则">
+                设计模式六大原则1:单一职责原则 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">ioext</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">30</span>
+                    <span class="site-state-item-name">tags</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP的生命周期"><span class="nav-number">1.</span> <span class="nav-text">PHP的生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Laravel的生命周期"><span class="nav-number">2.</span> <span class="nav-text">Laravel的生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">2.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动Laravel基础服务"><span class="nav-number">2.2.</span> <span class="nav-text">启动Laravel基础服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将请求传递给路由"><span class="nav-number">2.3.</span> <span class="nav-text">将请求传递给路由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务容器"><span class="nav-number">2.4.</span> <span class="nav-text">服务容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#依赖注入"><span class="nav-number">2.5.</span> <span class="nav-text">依赖注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绑定"><span class="nav-number">2.6.</span> <span class="nav-text">绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Contracts-amp-Facades（契约-amp-门面）"><span class="nav-number">2.7.</span> <span class="nav-text">Contracts &amp; Facades（契约&amp;门面）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ioext</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Muse</a> v6.4.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -122,7 +122,7 @@
 <meta property="og:image" content="http://ioext.com/public/static/images/laravel生命周期/4.png">
 <meta property="og:image" content="http://ioext.com/public/static/images/laravel生命周期/5.png">
 <meta property="og:image" content="http://ioext.com/public/static/images/laravel生命周期/6.png">
-<meta property="og:updated_time" content="2018-10-12T08:13:16.178Z">
+<meta property="og:updated_time" content="2018-10-12T09:04:01.477Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Laravel生命周期的核心概念">
 <meta name="twitter:description" content="工欲善其事，必先利其器。在开发Xblog的过程中，稍微领悟了一点Laravel的思想。确实如此，这篇文章读完你可能并不能从无到有写出一个博客，但知道Laravel的核心概念之后，当你再次写起Laravel时，会变得一目了然胸有成竹.   PHP的生命周期万物皆有他的生命周期。熟悉Android的同学一定熟悉Android最经典的Activity的生命周期，Laravel 也不例外，Laravel应">
@@ -381,7 +381,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-12 08:13:16" itemprop="dateModified" datetime="2018-10-12T08:13:16Z">2018-10-12</time>
+                <time title="修改时间：2018-10-12 09:04:01" itemprop="dateModified" datetime="2018-10-12T09:04:01Z">2018-10-12</time>
               
             
           </span>
@@ -439,7 +439,8 @@
 <p>2、请求初始化（RINIT），即初始化为执行本次脚本所需要的变量名称和变量值内容的符号表，如$_SESSION变量。</p>
 <p>3、执行该PHP脚本。</p>
 <p>4、请求处理完成(Request Shutdown)，按顺序调用各个模块的RSHUTDOWN方法，对每个变量调用unset函数，如unset $_SESSION变量。</p>
-<p>5、关闭模块(Module Shutdown) ， PHP调用每个扩展的MSHUTDOWN方法，这是各个模块最后一次释放内存的机会。这意味着没有下一个请求了。<br><a id="more"></a><br>WEB模式和CLI（命令行）模式很相似，区别是：CLI 模式会在每次脚本执行经历完整的5个周期，因为你脚本执行完不会有下一个请求；而WEB模式为了应对并发，可能采用多线程，因此生命周期1和5有可能只执行一次，下次请求到来时重复2-4的生命周期，这样就节省了系统模块初始化所带来的开销。  </p>
+<p>5、关闭模块(Module Shutdown) ， PHP调用每个扩展的MSHUTDOWN方法，这是各个模块最后一次释放内存的机会。这意味着没有下一个请求了。  </p>
+<p>WEB模式和CLI（命令行）模式很相似，区别是：CLI 模式会在每次脚本执行经历完整的5个周期，因为你脚本执行完不会有下一个请求；而WEB模式为了应对并发，可能采用多线程，因此生命周期1和5有可能只执行一次，下次请求到来时重复2-4的生命周期，这样就节省了系统模块初始化所带来的开销。  </p>
 <p>可以看到，PHP生命周期是很对称的。说了这么多，就是为了定位Laravel运行在哪里，没错，Laravel仅仅运行再第三个阶段：  </p>
 <p><img src="/public/static/images/laravel生命周期/1.png" alt="Image text">  </p>
 <p>知道这些有什么用？你可以优化你的Laravel代码，可以更加深入的了解Larave的singleton（单例）。至少你知道了，每一次请求结束，Php的变量都会unset，Laravel的singleton只是在某一次请求过程中的singleton；你在Laravel 中的静态变量也不能在多个请求之间共享，因为每一次请求结束都会unset。理解这些概念，是写高质量代码的第一步，也是最关键的一步。因此记住，PHP是一种脚本语言，所有的变量只会在这一次请求中生效，下次请求之时已被重置，而不像Java静态变量拥有全局作用</p>

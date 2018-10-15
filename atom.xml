@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ioext.com/"/>
-  <updated>2018-10-12T09:03:54.729Z</updated>
+  <updated>2018-10-15T06:44:09.180Z</updated>
   <id>http://ioext.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小崔的安全让我牵肠挂肚</title>
+    <link href="http://ioext.com/2018/10/15/%E5%B0%8F%E5%B4%94%E7%9A%84%E5%AE%89%E5%85%A8%E8%AE%A9%E6%88%91%E7%89%B5%E8%82%A0%E6%8C%82%E8%82%9A/"/>
+    <id>http://ioext.com/2018/10/15/小崔的安全让我牵肠挂肚/</id>
+    <published>2018-10-15T14:43:25.000Z</published>
+    <updated>2018-10-15T06:44:09.180Z</updated>
+    
+    <content type="html"><![CDATA[<p>​​原创： 艾丰  码字工匠老詹  今天</p><p>在微信上看了崔永元的讲话视频和有关信息，知道他受到了人身安全威胁，一贯睡眠很好的我，竟然夜不能寐，失眠了。索性爬起来，写下这段文字。</p><p>崔永元真的没有危险吗？</p><p>到底由谁来保护崔永元？</p><p>崔永元因为揭露影视界的丑闻，得到了广大群众的赞誉，但也受到一些非议，更值得注意的是，他已经受到了生命的威胁！</p><p>所以，人们不能不为小崔的安全牵肠挂肚。</p><p>也许有人说，他们不敢，只是威胁威胁而已，不敢动真的。</p><p>我不这样想。对崔永元这样的敢于揭露丑恶现象的英雄，我们不仅要大加称赞，更要倍加爱护。宁可把事情想得严重些，切不可掉以轻心。社会太需要这样的人了，他不能受到任何损害。</p><p>当然，我不认为影视界都是坏人，好人肯定还是多数。但是，少数坏人会做什么事，会不会有人铤而走险，谁敢打保票？</p><p>群众舆论的肯定，只是道义上的保护，不能代替具体的保护。</p><p>主管部门根据崔永元提供的线索，已经下发文件，采取了措施，并收到了立竿见影、大快人心的效果。这是对崔永元行为的支持，是这些部门应尽的职责。然而，即便如此，也不能代替具体的保护。</p><p>人身安全的责任，可能应该落实到公安系统。崔永元已经向公安机关报了案。这种自我保护意识，让我们看到了他的智慧。小崔说，有关派出所已经向上级做了汇报。我想，惩治坏人，保护好人，是我们公安部门的责任，这样的全国关注的大事，他们是不会掉以轻心的。</p><p>我们提倡“正能量”，但“正能量”是在和“负能量”的对抗中得以发挥的。所以，必须坚决支持和保护敢于向黑恶现象和势力做斗争的人。当我们的群众舆论、党和政府部门、公检法机关都来保护好人，那对坏人和丑恶现象就是最大震慑。</p><p>我们的法制建设应该跟上。我当全国政协委员的时候，就有过制定《舆论监督法》的提案。现在看，制定这样一个法律更显得必要。有了保护舆论监督者、举报者的法律，保护崔永元这样的好人，就会变得更加容易操作了。</p><p>本文作者艾丰，1938年4月5日生，高级记者，教授。曾任人民日报编委、经济部主任，经济日报总编辑。中国名牌战略最早倡导者之一，是公认的名牌理论权威专家。中国社科院研究生院、中国人民大学、北京财贸大学、中央民族学院等高等院校教授。现任中国工业经济联合会、中国质量协会副会长，中国名牌培育委员会主任，中国企业管理培训推进委员会主任。</p><p>崔永元：上大学新闻系教材就是艾丰先生的（新闻采访方法论）。艾丰先生教了我们采访没教我们避难。​​​​</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;​​原创： 艾丰  码字工匠老詹  今天&lt;/p&gt;
+&lt;p&gt;在微信上看了崔永元的讲话视频和有关信息，知道他受到了人身安全威胁，一贯睡眠很好的我，竟然夜不能寐，失眠了。索性爬起来，写下这段文字。&lt;/p&gt;
+&lt;p&gt;崔永元真的没有危险吗？&lt;/p&gt;
+&lt;p&gt;到底由谁来保护崔永元？&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>崔永元：别再让孩子聪明伶俐地进去呆若木鸡地出来</title>
@@ -550,36 +575,6 @@
       <category term="php" scheme="http://ioext.com/tags/php/"/>
     
       <category term="Laravel" scheme="http://ioext.com/tags/Laravel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>swoole独立于apache、nginx启动SwooleFramweork</title>
-    <link href="http://ioext.com/2017/10/17/swoole%E7%8B%AC%E7%AB%8B%E4%BA%8Eapache%E3%80%81nginx%E5%90%AF%E5%8A%A8SwooleFramweork/"/>
-    <id>http://ioext.com/2017/10/17/swoole独立于apache、nginx启动SwooleFramweork/</id>
-    <published>2017-10-16T16:15:42.000Z</published>
-    <updated>2017-10-17T10:23:04.000Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li><p>swoole是什么?请点击传送门</p><blockquote><p><a href="https://www.zhihu.com/question/35687627/answer/84459718" target="_blank" rel="noopener">Swoole到底是个什么东西</a></p></blockquote></li><li><p>swooleFramWork是什么?</p><blockquote><p>就是一个框架<br><a href="https://github.com/ioext/framework" target="_blank" rel="noopener">git地址</a></p></blockquote></li><li><p>其他的先不管,先把框架运行起来吧<br>通过上方git地址,将代码克隆到本地,然后在根目录创建server.php,代码如下</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">define(&apos;DEAMON&apos;, false);</span><br><span class="line">//MVC define 加载MVC扩展插件</span><br><span class="line">define(&apos;MVCAPP&apos;, true);</span><br><span class="line">//定义web路径</span><br><span class="line">define(&apos;WEBPATH&apos;, realpath(__DIR__));</span><br><span class="line">//config file 自定义</span><br><span class="line">define(&apos;CONFIGFILE&apos;, WEBPATH . &apos;/http_config.ini&apos;);</span><br><span class="line">//Server Log File</span><br><span class="line">define(&apos;LOGFILE&apos;, WEBPATH . &apos;/logs/server.log&apos;);</span><br><span class="line">//定义APPPATH</span><br><span class="line">define(&apos;APPPATH&apos;, WEBPATH . &apos;/apps/&apos;);</span><br><span class="line">//包含配置文件</span><br><span class="line">require WEBPATH . &apos;/libs/lib_config.php&apos;;</span><br><span class="line">//关闭debug</span><br><span class="line">Swoole\Config::$debug = false;</span><br><span class="line">//设置PID文件的存储路径</span><br><span class="line">Swoole\Network\Server::setPidFile(__DIR__ . &apos;/logs/http_server.pid&apos;);</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line">* 启动app server  独立于nginx apache</span><br><span class="line">* php http_server.php start|stop|reload   //配置默认路由</span><br><span class="line">*/</span><br><span class="line">Swoole\Network\Server::start(function () &#123;</span><br><span class="line">$server = Swoole\Protocol\WebServer::create(CONFIGFILE);</span><br><span class="line">//设置app的configs</span><br><span class="line">$server-&gt;setAppPath(APPPATH);</span><br><span class="line">$server-&gt;setLogger(new Swoole\Log\EchoLog(LOGFILE));</span><br><span class="line">//作为守护进程  生产环境开启 设置DEAMON=true</span><br><span class="line">if (DEAMON) &#123;</span><br><span class="line">$server-&gt;daemonize();</span><br><span class="line">&#125;</span><br><span class="line">//启动任务</span><br><span class="line">//$Task=Task::StartHomeworkCompletionCalcTask();</span><br><span class="line">//kill task</span><br><span class="line">//$Task-&gt;kill();</span><br><span class="line">//启动服务</span><br><span class="line">$server-&gt;run(array(&apos;worker_num&apos; =&gt; 1, &apos;react_num&apos; =&gt; 2, &apos;max_request&apos; =&gt; 500000, &apos;log_file&apos; =&gt; LOGFILE));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li></ul><p>然后创建http_config.ini文件,代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">[request]</span><br><span class="line">default_page = &quot;index.php&quot;</span><br><span class="line"></span><br><span class="line">[server]</span><br><span class="line">host = &quot;0.0.0.0&quot;</span><br><span class="line">port = 7777</span><br><span class="line">max_request = 2000</span><br><span class="line">worker_num = 4</span><br><span class="line">webroot = &apos;http://127.0.0.1:7777&apos;</span><br><span class="line">process_rename = 1</span><br><span class="line">;是否保持长链接</span><br><span class="line">keepalive = 1</span><br><span class="line">;document root</span><br><span class="line">document_root=&quot;/Users/User/work/test/swoolef&quot;</span><br><span class="line">;gzip_open = 1</span><br><span class="line">user = www-data</span><br><span class="line">expire_open = 1</span><br><span class="line"></span><br><span class="line">[access]</span><br><span class="line">;拒绝访问的目录</span><br><span class="line">deny_dir = &quot;libs,class,templates,config&quot;</span><br><span class="line">;可访问的静态目录</span><br><span class="line">static_dir = &quot;static,&quot;</span><br><span class="line">;可访问的静态文件</span><br><span class="line">static_ext = &quot;js,jpg,gif,png,css,html,txt&quot;</span><br><span class="line">;php扩展</span><br><span class="line">dynamic_ext = &quot;php&quot;</span><br><span class="line">;post最大上传</span><br><span class="line">post_maxsize = 2000000</span><br><span class="line"></span><br><span class="line">[apps]</span><br><span class="line">charset = &quot;utf-8&quot;</span><br><span class="line">;是否处理静态文件 开关</span><br><span class="line">do_static = on</span><br></pre></td></tr></table></figure></p><p>最后根目录创建logs/文件夹。  </p><p>好了,现在你可以打开终端敲上:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php server.php start -d</span><br></pre></td></tr></table></figure></p><p>验证是否开启:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep server.php</span><br></pre></td></tr></table></figure></p><p>然后在浏览器上输入:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:7777</span><br></pre></td></tr></table></figure></p><p>ok</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;swoole是什么?请点击传送门&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/35687627/answer/84459718&quot; target=&quot;_blank&quot; rel=&quot;noop
-      
-    
-    </summary>
-    
-    
-      <category term="swoole" scheme="http://ioext.com/tags/swoole/"/>
-    
-      <category term="SwooleFramework" scheme="http://ioext.com/tags/SwooleFramework/"/>
-    
-      <category term="php" scheme="http://ioext.com/tags/php/"/>
     
   </entry>
   

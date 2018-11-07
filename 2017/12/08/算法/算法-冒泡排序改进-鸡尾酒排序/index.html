@@ -116,12 +116,12 @@
 <meta property="og:site_name" content="ioext">
 <meta property="og:description" content="鸡尾酒排序鸡尾酒排序，也叫定向冒泡排序，是冒泡排序的一种改进。此算法与冒泡排序的不同处在于从低到高然后从高到低，而冒泡排序则仅从低到高去比较序列里的每个元素。他可以得到比冒泡排序稍微好一点的效能。 1234567891011121314151617181920212223242526272829303132function BubbleSort($arr) &amp;#123;    $left = 0;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://ioext.com/public/static/images/冒泡排序-鸡尾酒排序/1.gif">
-<meta property="og:updated_time" content="2017-12-07T08:41:05.000Z">
+<meta property="og:image" content="http://ioext.com/public/static/images/算法/冒泡排序-鸡尾酒排序/1.gif">
+<meta property="og:updated_time" content="2018-11-07T03:38:52.196Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法--冒泡排序改进--鸡尾酒排序">
 <meta name="twitter:description" content="鸡尾酒排序鸡尾酒排序，也叫定向冒泡排序，是冒泡排序的一种改进。此算法与冒泡排序的不同处在于从低到高然后从高到低，而冒泡排序则仅从低到高去比较序列里的每个元素。他可以得到比冒泡排序稍微好一点的效能。 1234567891011121314151617181920212223242526272829303132function BubbleSort($arr) &amp;#123;    $left = 0;">
-<meta name="twitter:image" content="http://ioext.com/public/static/images/冒泡排序-鸡尾酒排序/1.gif">
+<meta name="twitter:image" content="http://ioext.com/public/static/images/算法/冒泡排序-鸡尾酒排序/1.gif">
 
 
 
@@ -359,12 +359,24 @@
                 
               
 
-              <time title="创建时间：2017-12-07 16:29:35 / 修改时间：08:41:05" itemprop="dateCreated datePublished" datetime="2017-12-07T16:29:35Z">2017-12-07</time>
+              <time title="创建时间：2017-12-07 16:29:35" itemprop="dateCreated datePublished" datetime="2017-12-07T16:29:35Z">2017-12-07</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-11-07 03:38:52" itemprop="dateModified" datetime="2018-11-07T03:38:52Z">2018-11-07</time>
               
             
           </span>
@@ -400,7 +412,7 @@
         <h1 id="鸡尾酒排序"><a href="#鸡尾酒排序" class="headerlink" title="鸡尾酒排序"></a>鸡尾酒排序</h1><p>鸡尾酒排序，也叫定向冒泡排序，是冒泡排序的一种改进。此算法与冒泡排序的不同处在于从低到高然后从高到低，而冒泡排序则仅从低到高去比较序列里的每个元素。他可以得到比冒泡排序稍微好一点的效能。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">function BubbleSort($arr) </span><br><span class="line">&#123;</span><br><span class="line">    $left = 0;                //初始化边界</span><br><span class="line">    $right = count( $arr )-1;</span><br><span class="line">    while( $left &lt; $right )</span><br><span class="line">    &#123;</span><br><span class="line">        //前半轮，将最大元素放到后面</span><br><span class="line">        for ($i=$left; $i &lt; $right ; $i++)  </span><br><span class="line">        &#123; </span><br><span class="line">            if( $arr[$i] &gt; $arr[$i+1] )</span><br><span class="line">            &#123;</span><br><span class="line">                $tmp = $arr[$i+1];</span><br><span class="line">                $arr[ $i+1 ] = $arr[$i];</span><br><span class="line">                $arr[ $i ] = $tmp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        $right --;</span><br><span class="line"></span><br><span class="line">        // 后半轮,将最小元素放到前面</span><br><span class="line">        for ($i=$right; $i &gt; $left ; $i--) </span><br><span class="line">        &#123; </span><br><span class="line">            if( $arr[ $i-1 ] &gt; $arr[$i] )</span><br><span class="line">            &#123;</span><br><span class="line">                $tmps = $arr[ $i-1 ];</span><br><span class="line">                $arr[$i-1] = $arr[$i];</span><br><span class="line">                $arr[$i] = $tmps;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        $left++;</span><br><span class="line">    &#125;</span><br><span class="line">    return $arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>使用鸡尾酒排序为一列数字进行排序的过程如下图所示:</p>
-<p><img src="/public/static/images/冒泡排序-鸡尾酒排序/1.gif" alt=""></p>
+<p><img src="/public/static/images/算法/冒泡排序-鸡尾酒排序/1.gif" alt=""></p>
 <blockquote>
 <p>注意: 以序列(2,3,4,5,1)为例，鸡尾酒排序只需要访问一次序列就可以完成排序，但如果使用冒泡排序则需要四次。但是在乱数序列的状态下，鸡尾酒排序与冒泡排序的效率都很差劲。</p>
 </blockquote>

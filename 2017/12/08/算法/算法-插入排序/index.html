@@ -116,14 +116,14 @@
 <meta property="og:site_name" content="ioext">
 <meta property="og:description" content="插入排序 插入排序是一种简单直观的排序算法。它的工作原理非常类似于我们抓扑克牌   对于未排序数据(右手抓到的牌)，在已排序序列(左手已经排好序的手牌)中从后向前扫描，找到相应位置并插入   插入排序在实现上，通常采用in-place排序（即只需用到O(1)的额外空间的排序），因而在从后向前扫描过程中，需要反复把已排序元素逐步向后挪位，为最新元素提供插入空间   具体算法描述如下:  从第一个元素">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://ioext.com/public/static/images/插入排序/1.jpg">
-<meta property="og:image" content="http://ioext.com/public/static/images/插入排序/2.gif">
-<meta property="og:image" content="http://ioext.com/public/static/images/插入排序/3.gif">
-<meta property="og:updated_time" content="2017-12-07T09:34:22.000Z">
+<meta property="og:image" content="http://ioext.com/public/static/images/算法/插入排序/1.jpg">
+<meta property="og:image" content="http://ioext.com/public/static/images/算法/插入排序/2.gif">
+<meta property="og:image" content="http://ioext.com/public/static/images/算法/插入排序/3.gif">
+<meta property="og:updated_time" content="2018-11-07T03:38:52.202Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法--插入排序">
 <meta name="twitter:description" content="插入排序 插入排序是一种简单直观的排序算法。它的工作原理非常类似于我们抓扑克牌   对于未排序数据(右手抓到的牌)，在已排序序列(左手已经排好序的手牌)中从后向前扫描，找到相应位置并插入   插入排序在实现上，通常采用in-place排序（即只需用到O(1)的额外空间的排序），因而在从后向前扫描过程中，需要反复把已排序元素逐步向后挪位，为最新元素提供插入空间   具体算法描述如下:  从第一个元素">
-<meta name="twitter:image" content="http://ioext.com/public/static/images/插入排序/1.jpg">
+<meta name="twitter:image" content="http://ioext.com/public/static/images/算法/插入排序/1.jpg">
 
 
 
@@ -361,12 +361,24 @@
                 
               
 
-              <time title="创建时间：2017-12-07 17:18:21 / 修改时间：09:34:22" itemprop="dateCreated datePublished" datetime="2017-12-07T17:18:21Z">2017-12-07</time>
+              <time title="创建时间：2017-12-07 17:18:21" itemprop="dateCreated datePublished" datetime="2017-12-07T17:18:21Z">2017-12-07</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-11-07 03:38:52" itemprop="dateModified" datetime="2018-11-07T03:38:52Z">2018-11-07</time>
               
             
           </span>
@@ -402,7 +414,7 @@
         <h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><blockquote>
 <p>插入排序是一种简单直观的排序算法。它的工作原理非常类似于我们抓扑克牌</p>
 </blockquote>
-<p><img src="/public/static/images/插入排序/1.jpg" alt=""></p>
+<p><img src="/public/static/images/算法/插入排序/1.jpg" alt=""></p>
 <p>对于未排序数据(右手抓到的牌)，在已排序序列(左手已经排好序的手牌)中从后向前扫描，找到相应位置并插入  </p>
 <p>插入排序在实现上，通常采用in-place排序（即只需用到O(1)的额外空间的排序），因而在从后向前扫描过程中，需要反复把已排序元素逐步向后挪位，为最新元素提供插入空间  </p>
 <h3 id="具体算法描述如下"><a href="#具体算法描述如下" class="headerlink" title="具体算法描述如下:"></a>具体算法描述如下:</h3><blockquote>
@@ -417,9 +429,9 @@
 </blockquote>
 <p>插入排序的代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function InsertionSort($arr) </span><br><span class="line">&#123;</span><br><span class="line">    $n = count( $arr );</span><br><span class="line">    for ($i=1; $i &lt; $n; $i++)   //类似抓扑克牌排序</span><br><span class="line">    &#123; </span><br><span class="line">        $get = $arr[$i];        //右手抓到一张扑克牌</span><br><span class="line">        $j = $i-1;              //拿在左手上的牌总是排序好的</span><br><span class="line">        while( $j &gt;= 0 &amp;&amp; $arr[$j] &gt; $get )//将抓到的牌与手牌从右向左进行比较</span><br><span class="line">        &#123;</span><br><span class="line">            $arr[ $j+1 ] = $arr[$j];//如果该手牌比抓到的牌大，就将其右移</span><br><span class="line">            $j --;</span><br><span class="line">        &#125;</span><br><span class="line">        $arr[$j+1] = $get;      //直到该手牌比抓到的牌小(或者二者相等)，将抓到的牌插入到该手牌的右边(相等元素的相对次序未变，所以插入排序是稳定的)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return $arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>上述代码对序列{ 6, 5, 3, 1, 8, 7, 2, 4 }进行插入排序的实现过程如下</p>
-<p><img src="/public/static/images/插入排序/2.gif" alt=""></p>
+<p><img src="/public/static/images/算法/插入排序/2.gif" alt=""></p>
 <p>使用插入排序为一列数字进行排序的宏观过程:</p>
-<p><img src="/public/static/images/插入排序/3.gif" alt=""></p>
+<p><img src="/public/static/images/算法/插入排序/3.gif" alt=""></p>
 <blockquote>
 <p>注意:插入排序不适合对于数据量比较大的排序应用。但是，如果需要排序的数据量很小，比如量级小于千，那么插入排序还是一个不错的选择。 插入排序在工业级库中也有着广泛的应用，在STL的sort算法和stdlib的qsort算法中，都将插入排序作为快速排序的补充，用于少量元素的排序（通常为8个或以下）</p>
 </blockquote>

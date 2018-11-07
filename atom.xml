@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ioext.com/"/>
-  <updated>2018-10-17T02:43:01.663Z</updated>
+  <updated>2018-11-07T03:11:13.590Z</updated>
   <id>http://ioext.com/</id>
   
   <author>
@@ -17,9 +17,23 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>开篇词 | 照着做，你也能成为架构师！</title>
+    <link href="http://ioext.com/2018/11/07/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E5%AD%A6%E6%9E%B6%E6%9E%84/%E5%BC%80%E7%AF%87%E8%AF%8D-%E7%85%A7%E7%9D%80%E5%81%9A%EF%BC%8C%E4%BD%A0%E4%B9%9F%E8%83%BD%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%88%EF%BC%81/"/>
+    <id>http://ioext.com/2018/11/07/从0开始学架构/开篇词-照着做，你也能成为架构师！/</id>
+    <published>2018-11-07T11:11:13.000Z</published>
+    <updated>2018-11-07T03:11:13.590Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>阿里云的这群疯子</title>
-    <link href="http://ioext.com/2018/10/17/%E9%98%BF%E9%87%8C%E4%BA%91%E7%9A%84%E8%BF%99%E7%BE%A4%E7%96%AF%E5%AD%90/"/>
-    <id>http://ioext.com/2018/10/17/阿里云的这群疯子/</id>
+    <link href="http://ioext.com/2018/10/17/%E6%8A%80%E6%9C%AF%E5%9C%88%E5%8A%B1%E5%BF%97/%E9%98%BF%E9%87%8C%E4%BA%91%E7%9A%84%E8%BF%99%E7%BE%A4%E7%96%AF%E5%AD%90/"/>
+    <id>http://ioext.com/2018/10/17/技术圈励志/阿里云的这群疯子/</id>
     <published>2018-10-17T10:04:39.000Z</published>
     <updated>2018-10-17T02:43:01.663Z</updated>
     
@@ -45,8 +59,8 @@
   
   <entry>
     <title>小崔的安全让我牵肠挂肚</title>
-    <link href="http://ioext.com/2018/10/15/%E5%B0%8F%E5%B4%94%E7%9A%84%E5%AE%89%E5%85%A8%E8%AE%A9%E6%88%91%E7%89%B5%E8%82%A0%E6%8C%82%E8%82%9A/"/>
-    <id>http://ioext.com/2018/10/15/小崔的安全让我牵肠挂肚/</id>
+    <link href="http://ioext.com/2018/10/15/%E7%A4%BE%E4%BC%9A%E7%83%AD%E9%97%A8/%E5%B0%8F%E5%B4%94%E7%9A%84%E5%AE%89%E5%85%A8%E8%AE%A9%E6%88%91%E7%89%B5%E8%82%A0%E6%8C%82%E8%82%9A/"/>
+    <id>http://ioext.com/2018/10/15/社会热门/小崔的安全让我牵肠挂肚/</id>
     <published>2018-10-15T14:43:25.000Z</published>
     <updated>2018-10-15T06:44:09.180Z</updated>
     
@@ -70,8 +84,8 @@
   
   <entry>
     <title>崔永元：别再让孩子聪明伶俐地进去呆若木鸡地出来</title>
-    <link href="http://ioext.com/2018/10/12/%E5%B4%94%E6%B0%B8%E5%85%83%EF%BC%9A%E5%88%AB%E5%86%8D%E8%AE%A9%E5%AD%A9%E5%AD%90%E8%81%AA%E6%98%8E%E4%BC%B6%E4%BF%90%E5%9C%B0%E8%BF%9B%E5%8E%BB%E5%91%86%E8%8B%A5%E6%9C%A8%E9%B8%A1%E5%9C%B0%E5%87%BA%E6%9D%A5/"/>
-    <id>http://ioext.com/2018/10/12/崔永元：别再让孩子聪明伶俐地进去呆若木鸡地出来/</id>
+    <link href="http://ioext.com/2018/10/12/%E7%A4%BE%E4%BC%9A%E7%83%AD%E9%97%A8/%E5%B4%94%E6%B0%B8%E5%85%83%EF%BC%9A%E5%88%AB%E5%86%8D%E8%AE%A9%E5%AD%A9%E5%AD%90%E8%81%AA%E6%98%8E%E4%BC%B6%E4%BF%90%E5%9C%B0%E8%BF%9B%E5%8E%BB%E5%91%86%E8%8B%A5%E6%9C%A8%E9%B8%A1%E5%9C%B0%E5%87%BA%E6%9D%A5/"/>
+    <id>http://ioext.com/2018/10/12/社会热门/崔永元：别再让孩子聪明伶俐地进去呆若木鸡地出来/</id>
     <published>2018-10-12T14:14:58.000Z</published>
     <updated>2018-10-12T09:03:54.729Z</updated>
     
@@ -96,8 +110,8 @@
   
   <entry>
     <title>崔永元:举报北京朝阳分局新源里派出所</title>
-    <link href="http://ioext.com/2018/10/11/%E5%B4%94%E6%B0%B8%E5%85%83:%20%E4%B8%BE%E6%8A%A5%E5%8C%97%E4%BA%AC%E6%9C%9D%E9%98%B3%E5%88%86%E5%B1%80%E6%96%B0%E6%BA%90%E9%87%8C%E6%B4%BE%E5%87%BA%E6%89%80/"/>
-    <id>http://ioext.com/2018/10/11/崔永元: 举报北京朝阳分局新源里派出所/</id>
+    <link href="http://ioext.com/2018/10/11/%E7%A4%BE%E4%BC%9A%E7%83%AD%E9%97%A8/%E5%B4%94%E6%B0%B8%E5%85%83:%20%E4%B8%BE%E6%8A%A5%E5%8C%97%E4%BA%AC%E6%9C%9D%E9%98%B3%E5%88%86%E5%B1%80%E6%96%B0%E6%BA%90%E9%87%8C%E6%B4%BE%E5%87%BA%E6%89%80/"/>
+    <id>http://ioext.com/2018/10/11/社会热门/崔永元: 举报北京朝阳分局新源里派出所/</id>
     <published>2018-10-11T11:41:18.000Z</published>
     <updated>2018-10-15T02:49:50.066Z</updated>
     
@@ -121,8 +135,8 @@
   
   <entry>
     <title>可以管理时间的二叉堆</title>
-    <link href="http://ioext.com/2017/12/14/%E5%8F%AF%E4%BB%A5%E7%AE%A1%E7%90%86%E6%97%B6%E9%97%B4%E7%9A%84%E4%BA%8C%E5%8F%89%E5%A0%86/"/>
-    <id>http://ioext.com/2017/12/14/可以管理时间的二叉堆/</id>
+    <link href="http://ioext.com/2017/12/14/%E7%AE%97%E6%B3%95/%E5%8F%AF%E4%BB%A5%E7%AE%A1%E7%90%86%E6%97%B6%E9%97%B4%E7%9A%84%E4%BA%8C%E5%8F%89%E5%A0%86/"/>
+    <id>http://ioext.com/2017/12/14/算法/可以管理时间的二叉堆/</id>
     <published>2017-12-13T16:28:24.000Z</published>
     <updated>2017-12-14T04:31:47.000Z</updated>
     
@@ -150,8 +164,8 @@
   
   <entry>
     <title>Mysql常用的数据类型以及转换函数</title>
-    <link href="http://ioext.com/2017/12/11/Mysql%E5%B8%B8%E7%94%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%A5%E5%8F%8A%E8%BD%AC%E6%8D%A2%E5%87%BD%E6%95%B0/"/>
-    <id>http://ioext.com/2017/12/11/Mysql常用的数据类型以及转换函数/</id>
+    <link href="http://ioext.com/2017/12/11/mysql/Mysql%E5%B8%B8%E7%94%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%A5%E5%8F%8A%E8%BD%AC%E6%8D%A2%E5%87%BD%E6%95%B0/"/>
+    <id>http://ioext.com/2017/12/11/mysql/Mysql常用的数据类型以及转换函数/</id>
     <published>2017-12-11T10:32:42.000Z</published>
     <updated>2017-12-11T02:50:09.000Z</updated>
     
@@ -175,8 +189,8 @@
   
   <entry>
     <title>算法--插入排序改进--二分插入排序</title>
-    <link href="http://ioext.com/2017/12/08/%E7%AE%97%E6%B3%95-%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E6%94%B9%E8%BF%9B-%E4%BA%8C%E5%88%86%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/"/>
-    <id>http://ioext.com/2017/12/08/算法-插入排序改进-二分插入排序/</id>
+    <link href="http://ioext.com/2017/12/08/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95-%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E6%94%B9%E8%BF%9B-%E4%BA%8C%E5%88%86%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/"/>
+    <id>http://ioext.com/2017/12/08/算法/算法-插入排序改进-二分插入排序/</id>
     <published>2017-12-07T17:36:08.000Z</published>
     <updated>2017-12-07T10:07:43.000Z</updated>
     
@@ -202,8 +216,8 @@
   
   <entry>
     <title>算法--插入排序</title>
-    <link href="http://ioext.com/2017/12/08/%E7%AE%97%E6%B3%95-%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/"/>
-    <id>http://ioext.com/2017/12/08/算法-插入排序/</id>
+    <link href="http://ioext.com/2017/12/08/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95-%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/"/>
+    <id>http://ioext.com/2017/12/08/算法/算法-插入排序/</id>
     <published>2017-12-07T17:18:21.000Z</published>
     <updated>2017-12-07T09:34:22.000Z</updated>
     
@@ -229,8 +243,8 @@
   
   <entry>
     <title>算法--选择排序</title>
-    <link href="http://ioext.com/2017/12/08/%E7%AE%97%E6%B3%95-%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/"/>
-    <id>http://ioext.com/2017/12/08/算法-选择排序/</id>
+    <link href="http://ioext.com/2017/12/08/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95-%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/"/>
+    <id>http://ioext.com/2017/12/08/算法/算法-选择排序/</id>
     <published>2017-12-07T16:47:47.000Z</published>
     <updated>2017-12-07T09:14:54.000Z</updated>
     
@@ -256,8 +270,8 @@
   
   <entry>
     <title>算法--冒泡排序改进--鸡尾酒排序</title>
-    <link href="http://ioext.com/2017/12/08/%E7%AE%97%E6%B3%95-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E6%94%B9%E8%BF%9B-%E9%B8%A1%E5%B0%BE%E9%85%92%E6%8E%92%E5%BA%8F/"/>
-    <id>http://ioext.com/2017/12/08/算法-冒泡排序改进-鸡尾酒排序/</id>
+    <link href="http://ioext.com/2017/12/08/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E6%94%B9%E8%BF%9B-%E9%B8%A1%E5%B0%BE%E9%85%92%E6%8E%92%E5%BA%8F/"/>
+    <id>http://ioext.com/2017/12/08/算法/算法-冒泡排序改进-鸡尾酒排序/</id>
     <published>2017-12-07T16:29:35.000Z</published>
     <updated>2017-12-07T08:41:05.000Z</updated>
     
@@ -283,8 +297,8 @@
   
   <entry>
     <title>算法--冒泡排序</title>
-    <link href="http://ioext.com/2017/12/07/%E7%AE%97%E6%B3%95-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/"/>
-    <id>http://ioext.com/2017/12/07/算法-冒泡排序/</id>
+    <link href="http://ioext.com/2017/12/07/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/"/>
+    <id>http://ioext.com/2017/12/07/算法/算法-冒泡排序/</id>
     <published>2017-12-07T15:57:01.000Z</published>
     <updated>2017-12-07T08:27:56.000Z</updated>
     
@@ -310,8 +324,8 @@
   
   <entry>
     <title>递推(迭代)算法--递推算法</title>
-    <link href="http://ioext.com/2017/12/06/%E9%80%92%E6%8E%A8(%E8%BF%AD%E4%BB%A3)%E7%AE%97%E6%B3%95--%E9%80%92%E6%8E%A8%E7%AE%97%E6%B3%95/"/>
-    <id>http://ioext.com/2017/12/06/递推(迭代)算法--递推算法/</id>
+    <link href="http://ioext.com/2017/12/06/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8(%E8%BF%AD%E4%BB%A3)%E7%AE%97%E6%B3%95--%E9%80%92%E6%8E%A8%E7%AE%97%E6%B3%95/"/>
+    <id>http://ioext.com/2017/12/06/算法/递推(迭代)算法--递推算法/</id>
     <published>2017-12-06T12:17:48.000Z</published>
     <updated>2017-12-07T06:28:33.000Z</updated>
     
@@ -339,8 +353,8 @@
   
   <entry>
     <title>递推(迭代)算法--递归算法</title>
-    <link href="http://ioext.com/2017/12/06/%E9%80%92%E6%8E%A8(%E8%BF%AD%E4%BB%A3)%E7%AE%97%E6%B3%95--%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95/"/>
-    <id>http://ioext.com/2017/12/06/递推(迭代)算法--递归算法/</id>
+    <link href="http://ioext.com/2017/12/06/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8(%E8%BF%AD%E4%BB%A3)%E7%AE%97%E6%B3%95--%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95/"/>
+    <id>http://ioext.com/2017/12/06/算法/递推(迭代)算法--递归算法/</id>
     <published>2017-12-06T11:06:13.000Z</published>
     <updated>2017-12-07T06:30:03.000Z</updated>
     
@@ -368,8 +382,8 @@
   
   <entry>
     <title>一家要清退所有低端工程师的创业公司</title>
-    <link href="http://ioext.com/2017/11/28/%E4%B8%80%E5%AE%B6%E8%A6%81%E6%B8%85%E9%80%80%E6%89%80%E6%9C%89%E4%BD%8E%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84%E5%88%9B%E4%B8%9A%E5%85%AC%E5%8F%B8/"/>
-    <id>http://ioext.com/2017/11/28/一家要清退所有低端工程师的创业公司/</id>
+    <link href="http://ioext.com/2017/11/28/%E6%9D%82%E6%96%87/%E4%B8%80%E5%AE%B6%E8%A6%81%E6%B8%85%E9%80%80%E6%89%80%E6%9C%89%E4%BD%8E%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84%E5%88%9B%E4%B8%9A%E5%85%AC%E5%8F%B8/"/>
+    <id>http://ioext.com/2017/11/28/杂文/一家要清退所有低端工程师的创业公司/</id>
     <published>2017-11-28T10:15:14.000Z</published>
     <updated>2017-11-28T02:25:22.000Z</updated>
     
@@ -402,8 +416,8 @@
   
   <entry>
     <title>设计模式六大原则6:开闭原则</title>
-    <link href="http://ioext.com/2017/10/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%996-%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99/"/>
-    <id>http://ioext.com/2017/10/20/设计模式六大原则6-开闭原则/</id>
+    <link href="http://ioext.com/2017/10/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%996-%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99/"/>
+    <id>http://ioext.com/2017/10/20/设计模式/设计模式六大原则6-开闭原则/</id>
     <published>2017-10-20T15:24:20.000Z</published>
     <updated>2017-10-20T09:22:25.000Z</updated>
     
@@ -430,8 +444,8 @@
   
   <entry>
     <title>设计模式六大原则5:迪米特法则</title>
-    <link href="http://ioext.com/2017/10/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%995-%E8%BF%AA%E7%B1%B3%E7%89%B9%E6%B3%95%E5%88%99/"/>
-    <id>http://ioext.com/2017/10/20/设计模式六大原则5-迪米特法则/</id>
+    <link href="http://ioext.com/2017/10/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%995-%E8%BF%AA%E7%B1%B3%E7%89%B9%E6%B3%95%E5%88%99/"/>
+    <id>http://ioext.com/2017/10/20/设计模式/设计模式六大原则5-迪米特法则/</id>
     <published>2017-10-19T17:23:48.000Z</published>
     <updated>2017-10-20T07:23:47.000Z</updated>
     
@@ -461,8 +475,8 @@
   
   <entry>
     <title>设计模式六大原则4:接口隔离原则</title>
-    <link href="http://ioext.com/2017/10/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%994-%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99/"/>
-    <id>http://ioext.com/2017/10/20/设计模式六大原则4-接口隔离原则/</id>
+    <link href="http://ioext.com/2017/10/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%994-%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99/"/>
+    <id>http://ioext.com/2017/10/20/设计模式/设计模式六大原则4-接口隔离原则/</id>
     <published>2017-10-19T17:08:33.000Z</published>
     <updated>2017-10-19T09:22:21.000Z</updated>
     
@@ -489,8 +503,8 @@
   
   <entry>
     <title>设计模式六大原则3:依赖倒置原则</title>
-    <link href="http://ioext.com/2017/10/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%993-%E4%BE%9D%E8%B5%96%E5%80%92%E7%BD%AE%E5%8E%9F%E5%88%99/"/>
-    <id>http://ioext.com/2017/10/19/设计模式六大原则3-依赖倒置原则/</id>
+    <link href="http://ioext.com/2017/10/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%993-%E4%BE%9D%E8%B5%96%E5%80%92%E7%BD%AE%E5%8E%9F%E5%88%99/"/>
+    <id>http://ioext.com/2017/10/19/设计模式/设计模式六大原则3-依赖倒置原则/</id>
     <published>2017-10-19T12:22:01.000Z</published>
     <updated>2017-11-28T02:29:43.000Z</updated>
     
@@ -518,8 +532,8 @@
   
   <entry>
     <title>设计模式六大原则2:里氏替换原则</title>
-    <link href="http://ioext.com/2017/10/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%992-%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99/"/>
-    <id>http://ioext.com/2017/10/19/设计模式六大原则2-里氏替换原则/</id>
+    <link href="http://ioext.com/2017/10/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%992-%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99/"/>
+    <id>http://ioext.com/2017/10/19/设计模式/设计模式六大原则2-里氏替换原则/</id>
     <published>2017-10-18T17:08:01.000Z</published>
     <updated>2017-10-19T04:01:41.000Z</updated>
     
@@ -542,38 +556,6 @@
       <category term="设计模式" scheme="http://ioext.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
       <category term="里氏替换原则" scheme="http://ioext.com/tags/%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式六大原则1:单一职责原则</title>
-    <link href="http://ioext.com/2017/10/18/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%991-%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E5%8E%9F%E5%88%99/"/>
-    <id>http://ioext.com/2017/10/18/设计模式六大原则1-单一职责原则/</id>
-    <published>2017-10-17T18:18:05.000Z</published>
-    <updated>2017-10-19T03:29:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>定义:不要存在多于一个导致类变更的原因。通俗的说,即一个类只负责一项职责。</li><li>问题由来:类T负责两个不同的职责:职责P1,职责P2。当由于职责P1需求发生改变而需要修改类T时，有可能会导致原本运行正常的职责P2功能发生故障。</li><li>遵循单一职责原则。分别建立两个类T1、T2，使T1完成职责P1功能，T2完成职责P2功能。这样，当修改类T1时，不会使职责P2发生故障风险；同理，当修改T2时，也不会使职责P1发生故障风险。  </li></ul><p>说到单一职责原则，很多人都会不屑一顾。因为它太简单了。稍有经验的程序员即使从来没有读过设计模式、从来没有听说过单一职责原则，在设计软件时也会自觉的遵守这一重要原则，因为这是常识。在软件编程中，谁也不希望因为修改了一个功能导致其他的功能发生故障。而避免出现这一问题的方法便是遵循单一职责原则。虽然单一职责原则如此简单，并且被认为是常识，但是即便是经验丰富的程序员写出的程序，也会有违背这一原则的代码存在。为什么会出现这种现象呢？因为有职责扩散。所谓职责扩散，就是因为某种原因，职责P被分化为粒度更细的职责P1和P2。</p><p>比如：类T只负责一个职责P，这样设计是符合单一职责原则的。后来由于某种原因，也许是需求变更了，也许是程序的设计者境界提高了，需要将职责P细分为粒度更细的职责P1，P2，这时如果要使程序遵循单一职责原则，需要将类T也分解为两个类T1和T2，分别负责P1、P2两个职责。但是在程序已经写好的情况下，这样做简直太费时间了。所以，简单的修改类T，用它来负责两个职责是一个比较不错的选择，虽然这样做有悖于单一职责原则。（这样做的风险在于职责扩散的不确定性，因为我们不会想到这个职责P，在未来可能会扩散为P1，P2，P3，P4……Pn。所以记住，在职责扩散到我们无法控制的程度之前，立刻对代码进行重构。）<br> 举例说明，用一个类描述动物呼吸这个场景：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Animal&#123;  </span><br><span class="line">    public function breathe( $animal )&#123;  </span><br><span class="line">        echo $animal.&quot;呼吸空气&quot;;</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br><span class="line">class Client&#123;  </span><br><span class="line">    public function main( $arg )&#123;  </span><br><span class="line">        $animal = new Animal();  </span><br><span class="line">        $animal-&gt;breathe(&quot;牛&quot;);  </span><br><span class="line">        $animal-&gt;reathe(&quot;羊&quot;);  </span><br><span class="line">        $animal-&gt;breathe(&quot;猪&quot;);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>运行结果：<br>牛呼吸空气<br>羊呼吸空气<br>猪呼吸空气</p><p>程序上线后，发现问题了，并不是所有的动物都呼吸空气的，比如鱼就是呼吸水的。修改时如果遵循单一职责原则，需要将Animal类细分为陆生动物类Terrestrial，水生动物Aquatic，代码如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class Terrestrial&#123;  </span><br><span class="line">    public function breathe( $animal )&#123;  </span><br><span class="line">        echo $animal.&quot;呼吸空气&quot;;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br><span class="line">class Aquatic&#123;  </span><br><span class="line">    public function breathe( $animal)&#123;  </span><br><span class="line">        echo $animal.&quot;呼吸水&quot;;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">class Client&#123;  </span><br><span class="line">    public function main( $args )&#123;  </span><br><span class="line">        $terrestrial = new Terrestrial();  </span><br><span class="line">        $terrestrial-&gt;breathe(&quot;牛&quot;);  </span><br><span class="line">        $terrestrial-&gt;breathe(&quot;羊&quot;);  </span><br><span class="line">        $terrestrial-&gt;breathe(&quot;猪&quot;);  </span><br><span class="line">          </span><br><span class="line">        $aquatic = new Aquatic();  </span><br><span class="line">        $aquatic-&gt;breathe(&quot;鱼&quot;);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>我们会发现如果这样修改花销是很大的，除了将原来的类分解之外，还需要修改客户端。而直接修改类Animal来达成目的虽然违背了单一职责原则，但花销却小的多，代码如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Animal&#123;     </span><br><span class="line">    public function breathe($animal)</span><br><span class="line">    &#123;  </span><br><span class="line">        if(&quot;鱼&quot; == $animal))</span><br><span class="line">        &#123;  </span><br><span class="line">            echo $animal.&quot;呼吸水&quot;);  </span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;  </span><br><span class="line">           echo $animal.&quot;呼吸空气&quot;;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">class Client&#123;  </span><br><span class="line">    public function main($args)</span><br><span class="line">    &#123;  </span><br><span class="line">        $animal = new Animal();  </span><br><span class="line">        $animal-&gt;breathe(&quot;牛&quot;);  </span><br><span class="line">        $animal-&gt;breathe(&quot;羊&quot;);  </span><br><span class="line">        $animal-&gt;breathe(&quot;猪&quot;);  </span><br><span class="line">        $animal-&gt;breathe(&quot;鱼&quot;);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>可以看到，这种修改方式要简单的多。但是却存在着隐患：有一天需要将鱼分为呼吸淡水的鱼和呼吸海水的鱼，则又需要修改Animal类的breathe方法，而对原有代码的修改会对调用“猪”“牛”“羊”等相关功能带来风险，也许某一天你会发现程序运行的结果变为“牛呼吸水”了。这种修改方式直接在代码级别上违背了单一职责原则，虽然修改起来最简单，但隐患却是最大的。还有一种修改方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class Animal&#123;  </span><br><span class="line">    public function breathe($animal)</span><br><span class="line">    &#123;  </span><br><span class="line">        echo $animal.&quot;呼吸空气&quot;;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    public function breathe2($animal)</span><br><span class="line">    &#123;  </span><br><span class="line">        echo $animal.&quot;呼吸水&quot;;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">class Client&#123;  </span><br><span class="line">    public function main($args)&#123;  </span><br><span class="line">        $animal = new Animal();  </span><br><span class="line">        $animal-&gt;breathe(&quot;牛&quot;);  </span><br><span class="line">        $animal-&gt;breathe(&quot;羊&quot;);  </span><br><span class="line">        $animal-&gt;breathe(&quot;猪&quot;);  </span><br><span class="line">        $animal-&gt;breathe2(&quot;鱼&quot;);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>可以看到，这种修改方式没有改动原来的方法，而是在类中新加了一个方法，这样虽然也违背了单一职责原则，但在方法级别上却是符合单一职责原则的，因为它并没有动原来方法的代码。这三种方式各有优缺点，那么在实际编程中，采用哪一中呢？其实这真的比较难说，需要根据实际情况来确定。我的原则是：只有逻辑足够简单，才可以在代码级别上违反单一职责原则；只有类中方法数量足够少，才可以在方法级别上违反单一职责原则；<br>        例如本文所举的这个例子，它太简单了，它只有一个方法，所以，无论是在代码级别上违反单一职责原则，还是在方法级别上违反，都不会造成太大的影响。实际应用中的类都要复杂的多，一旦发生职责扩散而需要修改类时，除非这个类本身非常简单，否则还是遵循单一职责原则的好。<br>遵循单一职责原的优点有：</p><ul><li>可以降低类的复杂度，一个类只负责一项职责，其逻辑肯定要比负责多项职责简单的多；</li><li>提高类的可读性，提高系统的可维护性；</li><li>变更引起的风险降低，变更是必然的，如果单一职责原则遵守的好，当修改一个功能时，可以显著降低对其他功能的影响。<br>需要说明的一点是单一职责原则不只是面向对象编程思想所特有的，只要是模块化的程序设计，都适用单一职责原则。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;定义:不要存在多于一个导致类变更的原因。通俗的说,即一个类只负责一项职责。&lt;/li&gt;
-&lt;li&gt;问题由来:类T负责两个不同的职责:职责P1,职责P2。当由于职责P1需求发生改变而需要修改类T时，有可能会导致原本运行正常的职责P2功能发生故障。&lt;/li&gt;
-&lt;li&gt;遵
-      
-    
-    </summary>
-    
-    
-      <category term="php" scheme="http://ioext.com/tags/php/"/>
-    
-      <category term="设计模式" scheme="http://ioext.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="单一职责" scheme="http://ioext.com/tags/%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3/"/>
-    
-      <category term="设计模式原则" scheme="http://ioext.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%8E%9F%E5%88%99/"/>
     
   </entry>
   

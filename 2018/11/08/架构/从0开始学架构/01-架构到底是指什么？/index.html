@@ -108,18 +108,22 @@
 
 
 
-  <meta name="description" content="二分插入排序对于插入排序，如果比较操作的代价比交换操作大的话，可以采用二分查找法来减少比较操作的次数，我们称为二分插入排序，代码如下: 1234567891011121314151617181920212223242526272829function InsertionSortDichotomy($arr)&amp;#123;    $n = count($arr);    for ($i=1; $i &amp;">
-<meta name="keywords" content="算法,插入排序,二分插入排序">
+  <meta name="description" content="对于技术人员来说，“架构”是一个再常见不过的词了。我们会对新员工培训整个系统的架构，参加架构设计评审，学习业界开源系统（例如，MySQL、Hadoop）的架构，研究大公司的架构实现（例如，微信架构、淘宝架构）……虽然“架构”这个词常见，但如果深究一下“架构”到底指什么，大部分人也许并不一定能够准确地回答。例如：  架构和框架是什么关系？有什么区别？  Linux 有架构，MySQL 有架构，JVM">
+<meta name="keywords" content="从0开始学架构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="算法--插入排序改进--二分插入排序">
-<meta property="og:url" content="http://ioext.com/2017/12/08/算法/算法-插入排序改进-二分插入排序/index.html">
+<meta property="og:title" content="01 | 架构到底是指什么？">
+<meta property="og:url" content="http://ioext.com/2018/11/08/架构/从0开始学架构/01-架构到底是指什么？/index.html">
 <meta property="og:site_name" content="ioext">
-<meta property="og:description" content="二分插入排序对于插入排序，如果比较操作的代价比交换操作大的话，可以采用二分查找法来减少比较操作的次数，我们称为二分插入排序，代码如下: 1234567891011121314151617181920212223242526272829function InsertionSortDichotomy($arr)&amp;#123;    $n = count($arr);    for ($i=1; $i &amp;">
+<meta property="og:description" content="对于技术人员来说，“架构”是一个再常见不过的词了。我们会对新员工培训整个系统的架构，参加架构设计评审，学习业界开源系统（例如，MySQL、Hadoop）的架构，研究大公司的架构实现（例如，微信架构、淘宝架构）……虽然“架构”这个词常见，但如果深究一下“架构”到底指什么，大部分人也许并不一定能够准确地回答。例如：  架构和框架是什么关系？有什么区别？  Linux 有架构，MySQL 有架构，JVM">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-07T10:07:43.000Z">
+<meta property="og:image" content="http://ioext.com/public/static/images/架构/从0开始学架构/01-架构到底是指什么/1.png">
+<meta property="og:image" content="http://ioext.com/public/static/images/架构/从0开始学架构/01-架构到底是指什么/2.png">
+<meta property="og:image" content="http://ioext.com/public/static/images/架构/从0开始学架构/01-架构到底是指什么/3.png">
+<meta property="og:updated_time" content="2018-11-07T09:40:09.768Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="算法--插入排序改进--二分插入排序">
-<meta name="twitter:description" content="二分插入排序对于插入排序，如果比较操作的代价比交换操作大的话，可以采用二分查找法来减少比较操作的次数，我们称为二分插入排序，代码如下: 1234567891011121314151617181920212223242526272829function InsertionSortDichotomy($arr)&amp;#123;    $n = count($arr);    for ($i=1; $i &amp;">
+<meta name="twitter:title" content="01 | 架构到底是指什么？">
+<meta name="twitter:description" content="对于技术人员来说，“架构”是一个再常见不过的词了。我们会对新员工培训整个系统的架构，参加架构设计评审，学习业界开源系统（例如，MySQL、Hadoop）的架构，研究大公司的架构实现（例如，微信架构、淘宝架构）……虽然“架构”这个词常见，但如果深究一下“架构”到底指什么，大部分人也许并不一定能够准确地回答。例如：  架构和框架是什么关系？有什么区别？  Linux 有架构，MySQL 有架构，JVM">
+<meta name="twitter:image" content="http://ioext.com/public/static/images/架构/从0开始学架构/01-架构到底是指什么/1.png">
 
 
 
@@ -128,7 +132,7 @@
 
 
 
-  <link rel="canonical" href="http://ioext.com/2017/12/08/算法/算法-插入排序改进-二分插入排序/"/>
+  <link rel="canonical" href="http://ioext.com/2018/11/08/架构/从0开始学架构/01-架构到底是指什么？/"/>
 
 
 
@@ -138,7 +142,7 @@
   };
 </script>
 
-  <title>算法--插入排序改进--二分插入排序 | ioext</title>
+  <title>01 | 架构到底是指什么？ | ioext</title>
   
 
 
@@ -315,7 +319,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ioext.com/2017/12/08/算法/算法-插入排序改进-二分插入排序/">
+    <link itemprop="mainEntityOfPage" href="http://ioext.com/2018/11/08/架构/从0开始学架构/01-架构到底是指什么？/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ioext">
@@ -332,7 +336,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">算法--插入排序改进--二分插入排序
+          <h1 class="post-title" itemprop="name headline">01 | 架构到底是指什么？
               
             
           </h1>
@@ -357,7 +361,7 @@
                 
               
 
-              <time title="创建时间：2017-12-07 17:36:08 / 修改时间：10:07:43" itemprop="dateCreated datePublished" datetime="2017-12-07T17:36:08Z">2017-12-07</time>
+              <time title="创建时间：2018-11-07 16:10:30 / 修改时间：09:40:09" itemprop="dateCreated datePublished" datetime="2018-11-07T16:10:30Z">2018-11-07</time>
             
 
             
@@ -367,6 +371,24 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/架构/" itemprop="url" rel="index"><span itemprop="name">架构</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -395,11 +417,88 @@
       
 
       
-        <h1 id="二分插入排序"><a href="#二分插入排序" class="headerlink" title="二分插入排序"></a>二分插入排序</h1><p>对于插入排序，如果比较操作的代价比交换操作大的话，可以采用二分查找法来减少比较操作的次数，我们称为二分插入排序，代码如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">function InsertionSortDichotomy($arr)</span><br><span class="line">&#123;</span><br><span class="line">    $n = count($arr);</span><br><span class="line">    for ($i=1; $i &lt; $n ; $i++) </span><br><span class="line">    &#123; </span><br><span class="line">       $get = $arr[$i];         //右手抓到一张扑克</span><br><span class="line">       $left = 0;               // 拿在左手上的牌总是排序好的，所以可以用二分法</span><br><span class="line">       $right = $i - 1;         //手牌左右边界进行出初始化</span><br><span class="line"></span><br><span class="line">       while ( $left &lt;= $right) </span><br><span class="line">       &#123;</span><br><span class="line">           $mid =floor(($left+$right) / 2);</span><br><span class="line">           if( $arr[ $mid ] &gt; $get )</span><br><span class="line">           &#123;</span><br><span class="line">                $right = $mid - 1;</span><br><span class="line">           &#125;</span><br><span class="line">           else</span><br><span class="line">           &#123;</span><br><span class="line">                $left = $mid + 1;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       for ($j=$i-1; $j &gt;= $left ; $j--) //将欲插入的新牌的位置右边的牌整体向右移动一个单位</span><br><span class="line">       &#123; </span><br><span class="line">           $arr[$j+1] = $arr[$j];</span><br><span class="line">       &#125;</span><br><span class="line">       $arr[$left] = $get;              //将抓到的牌插入手牌</span><br><span class="line">    &#125;</span><br><span class="line">    return $arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>对于技术人员来说，“架构”是一个再常见不过的词了。我们会对新员工培训整个系统的架构，参加架构设计评审，学习业界开源系统（例如，MySQL、Hadoop）的架构，研究大公司的架构实现（例如，微信架构、淘宝架构）……虽然“架构”这个词常见，但如果深究一下“架构”到底指什么，大部分人也许并不一定能够准确地回答。例如：</p>
+<ul>
+<li><p>架构和框架是什么关系？有什么区别？</p>
+</li>
+<li><p>Linux 有架构，MySQL 有架构，JVM 也有架构，使用 Java 开发、MySQL 存储、跑在 Linux 上的业务系统也有架构，应该关注哪个架构呢？</p>
+</li>
+<li><p>微信有架构，微信的登录系统也有架构，微信的支付系统也有架构，当我们谈微信架构时，到底是在谈什么架构？</p>
+</li>
+</ul>
+<p>要想准确地回答这几个问题，关键在于梳理几个有关系而又相似的概念，包括：系统与子系统、模块与组件、框架与架构。</p>
+<h1 id="系统与子系统"><a href="#系统与子系统" class="headerlink" title="系统与子系统"></a>系统与子系统</h1><p>我们先来看维基百科定义的“系统”。</p>
 <blockquote>
-<p>注意:当n较大时，二分插入排序的比较次数比直接插入排序的最差情况好得多，但比直接插入排序的最好情况要差，所当以元素初始序列已经接近升序时，直接插入排序比二分插入排序比较次数少。二分插入排序元素移动次数与直接插入排序相同，依赖于元素初始序列</p>
+<p>系统泛指由一群有关联的个体组成，根据某种规则运作，能完成个别元件不能单独完成的工作的群体。它的意思是“总体”“整体”或“联盟”。</p>
 </blockquote>
+<p>我来提炼一下里面的关键内容：</p>
+<ul>
+<li><p>1、<b>关联</b>：系统是由一群有关联的个体组成的，没有关联的个体堆在一起不能成为一个系统。例如，把一个发动机和一台 PC 放在一起不能称之为一个系统，把发动机、底盘、轮胎、车架组合起来才能成为一台汽车。</p>
+</li>
+<li><p>2、<b>规则</b>：系统内的个体需要按照指定的规则运作，而不是单个个体各自为政。规则规定了系统内个体分工和协作的方式。例如，汽车发动机负责产生动力，然后通过变速器和传动轴，将动力输出到车轮上，从而驱动汽车前进。</p>
+</li>
+<li><p>3、<b>能力</b>：系统能力与个体能力有本质的差别，系统能力不是个体能力之和，而是产生了新的能力。例如，汽车能够载重前进，而发动机、变速器、传动轴、车轮本身都不具备这样的能力。</p>
+</li>
+</ul>
+<p>我们再来看子系统的定义。</p>
+<blockquote>
+<p>子系统也是由一群有关联的个体所组成的系统，多半会是更大系统中的一部分。</p>
+</blockquote>
+<p>其实子系统的定义和系统定义是一样的，只是观察的角度有差异，一个系统可能是另外一个更大系统的子系统。<br>按照这个定义，系统和子系统比较容易理解。我们以微信为例来做一个分析。</p>
+<ul>
+<li><p>1、微信本身是一个系统，包含聊天、登录、支付、朋友圈等子系统。</p>
+</li>
+<li><p>2、朋友圈这个系统又包括动态、评论、点赞等子系统。</p>
+</li>
+<li><p>3、评论这个系统可能又包括防刷子系统、审核子系统、发布子系统、存储子系统。</p>
+</li>
+<li><p>4、评论审核子系统不再包含业务意义上的子系统，而是包括各个模块或者组件，这些模块或者组件本身也是另外一个维度上的系统。例如，MySQL、Redis 等是存储系统，但不是业务子系统。</p>
+</li>
+</ul>
+<h1 id="模块与组件"><a href="#模块与组件" class="headerlink" title="模块与组件"></a>模块与组件</h1><p>模块和组件两个概念在实际工作中很容易混淆，我们经常能够听到类似这样的说法：</p>
+<ul>
+<li><p>MySQL 模块主要负责存储数据，而 ElasticSearch 模块主要负责数据搜索。</p>
+</li>
+<li><p>我们有安全加密组件、有审核组件。</p>
+</li>
+<li><p>App 的下载模块使用了第三方的组件。</p>
+</li>
+</ul>
+<p>造成这种现象的主要原因是，模块与组件的定义并不好理解，也不能很好地进行区分。我们来看看这两者在维基百科上的定义。</p>
+<blockquote>
+<p>软件模块（Module）是一套一致而互相有紧密关连的软件组织。它分别包含了程序和数据结构两部分。现代软件开发往往利用模块作为合成的单位。模块的接口表达了由该模块提供的功能和调用它时所需的元素。模块是可能分开被编写的单位。这使它们可再用和允许人员同时协作、编写及研究不同的模块。</p>
+<p>软件组件定义为自包含的、可编程的、可重用的、与语言无关的软件单元，软件组件可以很容易被用于组装应用程序中。</p>
+</blockquote>
+<p>可能你看完这两个定义后一头雾水，还是不知道这两者有什么区别。造成这种现象的根本原因是，<b>模块和组件都是系统的组成部分，只是从不同的角度拆分系统而已。</b></p>
+<p>从逻辑的角度来拆分系统后，得到的单元就是“模块”；从物理的角度来拆分系统后，得到的单元就是“组件”。划分模块的主要目的是职责分离；划分组件的主要目的是单元复用。其实，“组件”的英文 component 也可翻译成中文的“零件”一词，“零件”更容易理解一些，“零件”是一个物理的概念，并且具备“独立且可替换”的特点。</p>
+<p>我以一个最简单的网站系统来为例。假设我们要做一个学生信息管理系统，这个系统从逻辑的角度来拆分，可以分为“登录注册模块”“个人信息模块”“个人成绩模块”；从物理的角度来拆分，可以拆分为 Nginx、Web 服务器、MySQL。</p>
+<h1 id="框架与架构"><a href="#框架与架构" class="headerlink" title="框架与架构"></a>框架与架构</h1><p>框架是和架构比较相似的概念，且两者有较强的关联关系，所以在实际工作中，这两个概念有时我们容易分不清楚。参考维基百科上框架与架构的定义，我来解释两者的区别。</p>
+<blockquote>
+<p>软件框架（Software framework）通常指的是为了实现某个业界标准或完成特定基本任务的软件组件规范，也指为了实现某个软件组件规范时，提供规范所要求之基础功能的软件产品。</p>
+</blockquote>
+<p>我来提炼一下其中关键部分：</p>
+<ul>
+<li><p>1、框架是组件规范：例如，MVC 就是一种最常见的开发规范，类似的还有 MVP、MVVM、J2EE 等框架。</p>
+</li>
+<li><p>2、框架提供基础功能的产品：例如，Spring MVC 是 MVC 的开发框架，除了满足 MVC 的规范，Spring 提供了很多基础功能来帮助我们实现功能，包括注解（@Controller 等）、Spring Security、Spring JPA 等很多基础功能。</p>
+</li>
+</ul>
+<blockquote>
+<p>软件架构指软件系统的“基础结构”，创造这些基础结构的准则，以及对这些结构的描述。</p>
+</blockquote>
+<p>单纯从定义的角度来看，框架和架构的区别还是比较明显的，<b>框架关注的是“规范”，架构关注的是“结构”。</b> 框架的英文是 Framework，架构的英文是 Architecture。Spring MVC 的英文文档标题就是“Web MVC framework”。</p>
+<p>虽然如此，在实际工作中我们却经常碰到一些似是而非的说法。例如，“我们的系统是 MVC 架构”“我们需要将 android app 重构为 MVP 架构”“我们的系统基于 SSH 框架开发”“我们是 SSH 的架构”“XX 系统是基于 Spring MVC 框架开发，标准的 MVC 架构”……</p>
+<p>究竟什么说法是对的，什么说法是错的呢？</p>
+<p>其实这些说法都是对的，造成这种现象的根本原因隐藏于架构的定义中，关键就是“基础结构”这个概念并没有明确说是从什么角度来分解的。采用不同的角度或者维度，可以将系统划分为不同的结构，其实我在“模块与组件”中的“学生管理系统”示例已经包含了这点。<br>从业务逻辑的角度分解，“学生管理系统”的架构是：</p>
+<p><img src="/public/static/images/架构/从0开始学架构/01-架构到底是指什么/1.png" alt="Image text"> </p>
+<p>从物理部署的角度分解，“学生管理系统”的架构是：<br><img src="/public/static/images/架构/从0开始学架构/01-架构到底是指什么/2.png" alt="Image text"><br>从开发规范的角度分解，“学生管理系统”可以采用标准的 MVC 框架来开发，因此架构又变成了 MVC 架构：<br><img src="/public/static/images/架构/从0开始学架构/01-架构到底是指什么/3.png" alt="Image text"><br>这些“架构”，都是“学生管理系统”正确的架构，只是从不同的角度来分解而已，这也是 IBM 的 RUP 将软件架构视图分为著名的<b>“4+1 视图”</b>的原因。</p>
+<h1 id="重新定义架构"><a href="#重新定义架构" class="headerlink" title="重新定义架构"></a>重新定义架构</h1><p>参考维基百科的定义，我将架构重新定义为：<b>软件架构指软件系统的顶层结构。</b></p>
+<p>这个定义看似很简单，但包含的信息很丰富，基本上把系统、子系统、模块、组件、架构等概念都串起来了，我来详细解释一下。</p>
+<p>首先，“系统是一群关联个体组成”，这些“个体”可以是“子系统”“模块”“组件”等；架构需要明确系统包含哪些“个体”。</p>
+<p>其次，系统中的个体需要“根据某种规则”运作，架构需要明确个体运作和协作的规则。</p>
+<p>第三，维基百科定义的架构用到了“基础结构”这个说法，我改为“顶层结构”，可以更好地区分系统和子系统，避免将系统架构和子系统架构混淆在一起导致架构层次混乱。</p>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>今天我为你梳理了与架构有关的几个容易混淆的概念，包括系统与子系统、模块与组件、框架与架构，解释了架构的定义，希望对你有所帮助。</p>
+<p>这就是今天的全部内容，留一道思考题给你吧。你原来理解的架构是如何定义的？对比我今天讲的架构定义，你觉得差异在哪里？</p>
 
       
     </div>
@@ -449,11 +548,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/算法/" rel="tag"># 算法</a>
-          
-            <a href="/tags/插入排序/" rel="tag"># 插入排序</a>
-          
-            <a href="/tags/二分插入排序/" rel="tag"># 二分插入排序</a>
+            <a href="/tags/从0开始学架构/" rel="tag"># 从0开始学架构</a>
           
         </div>
       
@@ -520,8 +615,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/08/算法/算法-插入排序/" rel="next" title="算法--插入排序">
-                <i class="fa fa-chevron-left"></i> 算法--插入排序
+              <a href="/2018/11/07/架构/从0开始学架构/开篇词-照着做，你也能成为架构师！/" rel="next" title="开篇词 | 照着做，你也能成为架构师！">
+                <i class="fa fa-chevron-left"></i> 开篇词 | 照着做，你也能成为架构师！
               </a>
             
           </div>
@@ -530,8 +625,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/11/mysql/Mysql常用的数据类型以及转换函数/" rel="prev" title="Mysql常用的数据类型以及转换函数">
-                Mysql常用的数据类型以及转换函数 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/08/架构/从0开始学架构/02-架构设计的历史背景/" rel="prev" title="02 | 架构设计的历史背景">
+                02 | 架构设计的历史背景 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -759,7 +854,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#二分插入排序"><span class="nav-number">1.</span> <span class="nav-text">二分插入排序</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#系统与子系统"><span class="nav-number">1.</span> <span class="nav-text">系统与子系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模块与组件"><span class="nav-number">2.</span> <span class="nav-text">模块与组件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#框架与架构"><span class="nav-number">3.</span> <span class="nav-text">框架与架构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#重新定义架构"><span class="nav-number">4.</span> <span class="nav-text">重新定义架构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小结"><span class="nav-number">5.</span> <span class="nav-text">小结</span></a></li></ol></div>
             
 
           </div>
